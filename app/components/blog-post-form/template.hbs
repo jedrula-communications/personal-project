@@ -1,0 +1,11 @@
+<h1>Create a blog post</h1>
+{{paper-input label="Title" value=title onChange=(action (mut title))}}
+{{paper-input
+  textarea=true
+  label="body"
+  value=body
+  onChange=(action (mut body))
+  block=true
+}}
+
+{{#paper-button raised=true onClick=(action "submit")}}Submit{{/paper-button}}
