@@ -24,25 +24,6 @@ module.exports = function(deployTarget) {
     ENV.pipeline = {
       activateOnDeploy: true
     }
-
-    const accessKeyId = 'AKIAJQIG3MZR4L67CCUA';
-    const secretAccessKey = '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';
-    const bucket = "jedrek";
-    const region =  "us-west-2";
-
-    ENV['s3-index'] = {
-      accessKeyId,
-      secretAccessKey,
-      bucket,
-      region,
-      allowOverwrite: true
-    },
-    ENV['s3'] = {
-      accessKeyId,
-      secretAccessKey,
-      bucket,
-      region,
-    }
     // configure other plugins for production deploy target here
   }
 
