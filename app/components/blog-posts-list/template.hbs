@@ -1,0 +1,12 @@
+{{#paper-list}}
+  {{#each posts as |post|}}
+    {{#paper-item class="md-3-line"}}
+      <div class="md-list-item-text">
+        <h3>{{post.title}}</h3>
+        <p>{{post.body}}</p>
+      </div>
+      {{paper-divider}}
+      {{#paper-button click=(route-action "remove" post)}}Delete{{/paper-button}}
+    {{/paper-item}}
+  {{/each}}
+{{/paper-list}}
