@@ -4,7 +4,7 @@ export default Ember.Component.extend({
   actions: {
     submit() {
       const form = this.getProperties('body', 'title');
-      this.get('save')(form);
+      this.get('save')(form).then(this.setProperties.bind(this, { title: '', body: ''}));
     }
   }
 });
