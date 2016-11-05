@@ -1,10 +1,15 @@
 import Ember from 'ember';
 
-export default Ember.Component.extend({
+const { A, Component } = Ember;
+
+export default Component.extend({
+  categories: ['css', 'heroku', 'ember', 'node', 'productivity', 'misc'],
+  category: null,
   actions: {
     submit() {
-      const form = this.getProperties('body', 'title');
-      this.get('save')(form).then(this.setProperties.bind(this, { title: '', body: ''}));
+      const formProperties = { title: '', body: '', category: '' };
+      const form = this.getProperties(Object.keys(formProperties));
+      this.get('save')(form).then(this.setProperties.bind(this, formProperties));
     }
   }
 });

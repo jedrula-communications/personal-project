@@ -1,5 +1,21 @@
 <h1>Create a blog post</h1>
 {{paper-input label="Title" value=title onChange=(action (mut title))}}
+<!--TODO add a placeholder-->
+<div><label>category:</label></div>
+{{#power-select
+  renderInPlace=true
+  selected=category
+  options=categories
+  onchange=(action (mut category))
+  as |xxx|
+}}
+  {{xxx}}
+{{/power-select}}
+<!--<select name="category">
+
+</select>-->
+
+
 {{paper-input
   textarea=true
   label="body"

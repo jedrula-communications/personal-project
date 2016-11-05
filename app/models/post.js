@@ -4,4 +4,5 @@ const { attr, Model } = DS;
 export default Model.extend({
   title: attr('String'),
   body: attr('String'),
+  category: attr('String'),
 });
