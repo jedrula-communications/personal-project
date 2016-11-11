@@ -1,0 +1,10 @@
+<h1>Edit a blog post</h1>
+{{log model.post.category}}
+
+{{blog-post-form
+    title=model.post.title
+    category=model.post.category
+    categories=model.categories
+    body=model.post.body
+    save=(route-action 'put' model.post)
+}}

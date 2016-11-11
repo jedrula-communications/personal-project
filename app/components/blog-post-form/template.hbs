@@ -1,4 +1,3 @@
-<h1>Create a blog post</h1>
 {{paper-input label="Title" value=title onChange=(action (mut title))}}
 <!--TODO add a placeholder-->
 <div><label>category:</label></div>
@@ -7,13 +6,10 @@
   selected=category
   options=categories
   onchange=(action (mut category))
-  as |xxx|
+  as |category|
 }}
-  {{xxx}}
+  {{category}}
 {{/power-select}}
-<!--<select name="category">
-
-</select>-->
 
 
 {{paper-input

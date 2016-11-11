@@ -1,0 +1,10 @@
+{{#paper-item class="md-3-line"}}
+    <div class="md-list-item-text">
+    <h3>{{#link-to 'post' post}}{{post.title}}{{/link-to}}</h3>
+    <h4>{{post.category}}</h4>
+    <p>{{post.body}}</p>
+    </div>
+    {{paper-divider}}
+    {{#link-to 'post.edit' post class='md-button'}}Edit{{/link-to}}
+    {{#paper-button click=(route-action "remove" post)}}Delete{{/paper-button}}
+{{/paper-item}}

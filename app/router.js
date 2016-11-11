@@ -9,6 +9,13 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('blog', { path: '' });
   this.route('portfolio');
+
+  this.route('post', {
+    path: 'post/:post_id'
+  }, function() {
+    this.route('edit');
+  });
+  this.route('create-post');
 });
 
 export default Router;
