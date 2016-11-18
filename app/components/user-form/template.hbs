@@ -1,0 +1,16 @@
+{{#paper-form as |form|}}
+  {{#form.input
+    value=identification
+    label="identification"
+    onChange=(action (mut identification))}}
+  {{/form.input}}
+
+  {{#form.input
+    type="password"
+    value=password
+    label="password"
+    onChange=(action (mut password))}}
+  {{/form.input}}
+
+  {{#paper-button type="submit" click=(action submitAction identification password) raised=true primary=true}}Submit{{/paper-button}}
+{{/paper-form}}

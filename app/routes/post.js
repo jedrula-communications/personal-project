@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-const { RSVP: { hash }, inject: { service } } = Ember;
+const { inject: { service } } = Ember;
 
 export default Ember.Route.extend({
     categories: service(),

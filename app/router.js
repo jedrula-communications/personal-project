@@ -16,6 +16,8 @@ Router.map(function() {
     this.route('edit');
   });
   this.route('create-post');
+  this.route('login');
+  this.route('register');
 });
 
 export default Router;

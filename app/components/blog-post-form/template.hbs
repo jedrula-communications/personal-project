@@ -1,5 +1,5 @@
 {{paper-input label="Title" value=title onChange=(action (mut title))}}
-<!--TODO add a placeholder-->
+{{!-- TODO add a placeholder --}}
 <div><label>category:</label></div>
 {{#power-select
   renderInPlace=true
@@ -21,3 +21,8 @@
 }}
 
 {{#paper-button raised=true onClick=(action "submit")}}Submit{{/paper-button}}
+
+
+<h3>Preview</h3>
+
+{{blog-post post=(hash body=body title=title category=category)}}
