@@ -1,15 +1,15 @@
 {{paper-input label="Title" value=title onChange=(action (mut title))}}
 {{!-- TODO add a placeholder --}}
-<div><label>category:</label></div>
-{{#power-select
+<div><label>categories:</label></div>
+{{#power-select-multiple
   renderInPlace=true
-  selected=category
-  options=categories
-  onchange=(action (mut category))
+  selected=categories
+  options=availableCategories
+  onchange=(action (mut categories))
   as |category|
 }}
-  {{category}}
-{{/power-select}}
+  {{category.title}}
+{{/power-select-multiple}}
 
 
 {{paper-input
@@ -25,4 +25,4 @@
 
 <h3>Preview</h3>
 
-{{blog-post post=(hash body=body title=title category=category)}}
+{{blog-post post=(hash body=body title=title categories=categories)}}

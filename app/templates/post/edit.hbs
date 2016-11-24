@@ -3,8 +3,8 @@
 
 {{blog-post-form
     title=model.post.title
-    category=model.post.category
-    categories=model.categories
+    categories=model.post.categories
+    availableCategories=model.categories
     body=model.post.body
     save=(route-action 'put' model.post)
 }}

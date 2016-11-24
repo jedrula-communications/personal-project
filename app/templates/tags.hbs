@@ -1,0 +1,15 @@
+{{#each model as |tag|}}
+  {{#paper-item class="md-3-line"}}
+    <div class="md-list-item-text">
+      {{tag.title}}
+    </div>
+    {{paper-divider}}
+    {{#link-to 'tag.edit' tag class='md-button'}}Edit{{/link-to}}
+    {{#paper-button click=(route-action "remove" tag)}}Delete{{/paper-button}}
+  {{/paper-item}}
+{{/each}}
+
+
+
+<h3> create </h3>
+{{tag-form submit=(route-action "create")}}

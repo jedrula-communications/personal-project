@@ -15,9 +15,16 @@ Router.map(function() {
   }, function() {
     this.route('edit');
   });
+
+  this.route('tag', {
+    path: 'tag/:tag_id'
+  }, function() {
+    this.route('edit');
+  });
   this.route('create-post');
   this.route('login');
   this.route('register');
+  this.route('tags');
 });
 
 export default Router;

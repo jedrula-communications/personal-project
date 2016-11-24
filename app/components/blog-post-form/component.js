@@ -3,10 +3,10 @@ import Ember from 'ember';
 const { Component } = Ember;
 
 export default Component.extend({
-  category: null,
+  categories: null,
   actions: {
     submit() {
-      const form = this.getProperties('title', 'body', 'category');
+      const form = this.getProperties('title', 'body', 'categories');
       this.get('save')(form);
     }
   }

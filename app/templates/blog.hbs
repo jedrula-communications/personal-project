@@ -1,7 +1,22 @@
-{{#link-to 'blog' (query-params category="null")}}ALL{{/link-to}}
-{{#each categories as |category|}}
-  {{#link-to 'blog' (query-params category=category)}}{{category}}{{/link-to}}
-{{/each}}
+{{#link-to 'blog' (query-params categories="null")}}ALL{{/link-to}}
+{{#power-select-multiple
+  renderInPlace=true
+  selected=categories
+  options=availableCategories
+  onchange=(action (mut categories))
+  as |category|
+}}
+  {{category.title}}
+{{/power-select-multiple}}
+
+{{!-- {{#each availableCategories as |availableCategory|}}
+  {{#paper-button
+    class=(if availableCategory.selected 'md-focused' 'not-focused')
+    click=(action 'clickedCategory' availableCategory.category.id)
+  }}
+    {{availableCategory.category.title}}
+  {{/paper-button}}
+{{/each}} --}}
 
 {{#if isAdmin}}
   <h1>

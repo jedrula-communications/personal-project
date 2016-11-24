@@ -1,10 +1,9 @@
 import Ember from 'ember';
-const { inject: { service }} = Ember;
+const { Route } = Ember;
 
-export default Ember.Route.extend({
-  categories: service(),
+export default Route.extend({
   model() {
-      return this.get('categories').fetch();
+    return this.get('store').findAll('tag');
   },
   actions: {
     persist(form) {

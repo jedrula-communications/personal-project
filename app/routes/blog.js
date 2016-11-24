@@ -1,14 +1,18 @@
 import Ember from 'ember';
 
-const {RSVP: { hash }, inject: { service }} = Ember;
+const {RSVP: { hash }} = Ember;
 
 export default Ember.Route.extend({
-  categories: service(),
-  model() {
-    // TODO call with query param?
+  queryParams: {
+    categories: {
+      refreshModel: true,
+    },
+  },
+  model(queryParams) {
     return hash({
-      posts: this.get('store').findAll('post'),
-      categories: this.get('categories').fetch(),
+      // TODO this should work better now its using something like an OR, it should use AND
+      posts: this.get('store').query('post', { filter: queryParams }),
+      availableCategories: this.get('store').findAll('tag'),
     });
   },
 });
