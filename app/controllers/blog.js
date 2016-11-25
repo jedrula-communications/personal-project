@@ -6,16 +6,13 @@ const { A, computed, Controller } = Ember;
 export default Controller.extend(sessionControllerMixin, {
   posts: computed.alias('model.posts'),
 
-  availableCategories: computed.alias('model.availableCategories', 'categories', function() {
-    return this.get('model.availableCategories').map((category) => {
-      const selected = this.get('categories').indexOf(category.get('id')) !== -1;
-      return {
-        category,
-        selected,
-      };
+  availableCategoryRecords: computed.alias('model.availableCategories'),
+  categories: A(),
+  selectedCategories: computed('categories', function() {
+    return this.get('availableCategoryRecords').filter((record) => {
+      return this.get('categories').indexOf(record.get('id')) !== -1;
     })
   }),
-  categories: [],
 
   filteredPosts: computed('categories', 'posts', function() {
     const categories = this.get('categories');
@@ -29,14 +26,10 @@ export default Controller.extend(sessionControllerMixin, {
   }),
 
   actions: {
-    clickedCategory(id) {
-      const categories = this.get('categories');
-      if (categories.indexOf(id) === -1) {
-        categories.pushObject(id);
-      } else {
-        categories.removeObject(id);
-      }
-      this.transitionToRoute({ queryParams: { categories: ['x'] } });
+    changeCategories(selected) {
+      console.log('selected', selected)
+      this.set('categories', selected.mapBy('id'));
+      // this.transitionToRoute({ queryParams: { categories } });
     },
   }
 });

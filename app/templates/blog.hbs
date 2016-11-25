@@ -1,22 +1,8 @@
-{{#link-to 'blog' (query-params categories="null")}}ALL{{/link-to}}
-{{#power-select-multiple
-  renderInPlace=true
-  selected=categories
-  options=availableCategories
-  onchange=(action (mut categories))
-  as |category|
+{{tags-multiselect
+  selectedCategories=selectedCategories
+  availableCategoryRecords=availableCategoryRecords
+  changeCategories=(action "changeCategories")
 }}
-  {{category.title}}
-{{/power-select-multiple}}
-
-{{!-- {{#each availableCategories as |availableCategory|}}
-  {{#paper-button
-    class=(if availableCategory.selected 'md-focused' 'not-focused')
-    click=(action 'clickedCategory' availableCategory.category.id)
-  }}
-    {{availableCategory.category.title}}
-  {{/paper-button}}
-{{/each}} --}}
 
 {{#if isAdmin}}
   <h1>

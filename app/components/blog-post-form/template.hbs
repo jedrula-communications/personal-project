@@ -1,16 +1,12 @@
 {{paper-input label="Title" value=title onChange=(action (mut title))}}
 {{!-- TODO add a placeholder --}}
 <div><label>categories:</label></div>
-{{#power-select-multiple
-  renderInPlace=true
-  selected=categories
-  options=availableCategories
-  onchange=(action (mut categories))
-  as |category|
-}}
-  {{category.title}}
-{{/power-select-multiple}}
 
+{{tags-multiselect
+  selectedCategories=categories
+  availableCategoryRecords=availableCategoryRecords
+  changeCategories=(action (mut categories))
+}}
 
 {{paper-input
   textarea=true

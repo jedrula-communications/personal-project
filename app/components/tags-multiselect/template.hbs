@@ -1,0 +1,10 @@
+{{#power-select-multiple
+  renderInPlace=true
+  selected=selectedCategories
+  options=availableCategoryRecords
+  onchange=changeCategories
+  as |category|
+}}
+  {{category.title}}
+  {{!-- {{get (find-by 'id' categoryId availableCategoryRecords) "title"}} --}}
+{{/power-select-multiple}}
