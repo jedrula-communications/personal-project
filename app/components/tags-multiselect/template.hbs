@@ -1,10 +1,15 @@
-{{#power-select-multiple
-  renderInPlace=true
-  selected=selectedCategories
+{{!-- TODO fix the mess with category vs tag naming --}}
+{{!-- maybe we could just extend the component ? --}}
+{{#paper-chips
+  searchField="title"
+  noMatchesMessage="Not found. Click to add."
+  content=selectedCategories
   options=availableCategoryRecords
-  onchange=changeCategories
-  as |category|
+  removeItem=removeItem
+  addItem=addItem
+  placeholder=placeholder
+  as |tag|
 }}
-  {{category.title}}
-  {{!-- {{get (find-by 'id' categoryId availableCategoryRecords) "title"}} --}}
-{{/power-select-multiple}}
+  {{tag.title}}
+{{/paper-chips}}
+

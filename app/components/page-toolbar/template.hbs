@@ -1,9 +1,9 @@
-{{#paper-toolbar as |toolbar|}}
+{{#paper-toolbar tall="true" as |toolbar|}}
   {{#toolbar.tools}}
     <h2>Welcome to Jedrula page</h2>
     <span class="flex"></span>
     {{#paper-button}}
-      {{#link-to 'blog'}}blog{{/link-to}}
+      {{#link-to 'blog' (query-params categories=defaultCategory)}}blog{{/link-to}}
     {{/paper-button}}
     {{#paper-button}}
       {{#link-to 'portfolio'}}portfolio{{/link-to}}
@@ -25,5 +25,4 @@
       {{/paper-button}}
     {{/if}}
   {{/toolbar.tools}}
-
 {{/paper-toolbar}}

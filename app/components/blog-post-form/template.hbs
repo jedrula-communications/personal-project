@@ -1,11 +1,12 @@
 {{paper-input label="Title" value=title onChange=(action (mut title))}}
-{{!-- TODO add a placeholder --}}
 <div><label>categories:</label></div>
 
 {{tags-multiselect
-  selectedCategories=categories
+  categories=formCategories
   availableCategoryRecords=availableCategoryRecords
-  changeCategories=(action (mut categories))
+  addItem=(action "addItem")
+  removeItem=(action "removeItem")
+  placeholder="Add a tag"
 }}
 
 {{paper-input
@@ -21,4 +22,4 @@
 
 <h3>Preview</h3>
 
-{{blog-post post=(hash body=body title=title categories=categories)}}
+{{blog-post post=(hash body=body title=title categories=formCategories)}}

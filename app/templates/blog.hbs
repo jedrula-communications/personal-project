@@ -1,7 +1,10 @@
 {{tags-multiselect
-  selectedCategories=selectedCategories
+  categories=categories
   availableCategoryRecords=availableCategoryRecords
   changeCategories=(action "changeCategories")
+  addItem=(action "addItem")
+  removeItem=(action "removeItem")
+  placeholder="Search by tag"
 }}
 
 {{#if isAdmin}}
@@ -12,5 +15,7 @@
   </h1>
 {{/if}}
 
-{{blog-posts-list posts=filteredPosts}}
-
+{{blog-posts-list
+  posts=filteredPosts
+  showActionButtons=isAdmin
+}}

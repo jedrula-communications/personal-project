@@ -7,7 +7,10 @@ export default Route.extend({
   },
   actions: {
     persist(form) {
-      // FIXME rollback if unsuccesful!
+      // TODO add some sanity to all that mutability and categories/tags hell
+      form.categories = form.categories.map((categoryId) => {
+        return this.get('store').peekRecord('tag', categoryId);
+      })
       const newPost = this.get('store').createRecord('post', form);
       return newPost.save()
         .then(() => {

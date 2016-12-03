@@ -10,6 +10,9 @@ export default Ember.Route.extend({
         .createRecord('tag', { title })
         .save()
         .then(() => this.transitionTo('tags'));
+    },
+    remove(tag) {
+      return tag.destroyRecord();
     }
   }
 });

@@ -1,0 +1,23 @@
+& {
+  .md-chip-content a{
+    text-decoration: inherit;
+  }
+  a {
+    color: inherit;
+  }
+
+  md-card-content p {
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  .limitted {
+    height: 50px;
+    overflow: hidden;
+  }
+
+  .read-more {
+    margin-top: 10px;
+  }
+}

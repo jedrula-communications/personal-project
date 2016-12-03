@@ -1,5 +1,27 @@
-@import "ember-power-select";
+// @import "ember-power-select";
 @import 'ember-paper';
+@import 'pod-styles';
+
+body {
+  background: #e9eaed;
+}
+
+// FIXME remove this hack and fix styling
+md-virtual-repeat-container {
+  width: 300px;
+}
+
+.portfolio {
+  margin-top: -50px;
+  position: relative;
+  z-index: 2;
+}
+
+
+.portfolio-card {
+  max-width: 100%;
+  width: 600px;
+}
 
 .ember-basic-dropdown {
     width: 240px;

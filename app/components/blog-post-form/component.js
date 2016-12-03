@@ -1,13 +1,23 @@
 import Ember from 'ember';
 
-const { Component } = Ember;
+const { A, Component } = Ember;
 
 export default Component.extend({
-  categories: null,
+  formCategories: A(),
   actions: {
     submit() {
-      const form = this.getProperties('title', 'body', 'categories');
-      this.get('save')(form);
-    }
+      const form = this.getProperties('title', 'body', 'formCategories');
+      this.get('save')({
+        title: form.title,
+        body: form.body,
+        categories: form.formCategories,
+      });
+    },
+    removeItem(item) {
+      this.get('formCategories').removeObject(item.get('id'));
+    },
+    addItem(item) {
+      this.get('formCategories').addObject(item.get('id'))
+    },
   }
 });

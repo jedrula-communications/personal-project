@@ -8,11 +8,6 @@ export default Controller.extend(sessionControllerMixin, {
 
   availableCategoryRecords: computed.alias('model.availableCategories'),
   categories: A(),
-  selectedCategories: computed('categories', function() {
-    return this.get('availableCategoryRecords').filter((record) => {
-      return this.get('categories').indexOf(record.get('id')) !== -1;
-    })
-  }),
 
   filteredPosts: computed('categories', 'posts', function() {
     const categories = this.get('categories');
@@ -22,12 +17,19 @@ export default Controller.extend(sessionControllerMixin, {
       return categories.every(function(category) {
         return postCategories.indexOf(category) !== -1;
       });
-    })
+    });
   }),
 
   actions: {
+    removeItem(item) {
+      this.get('categories').removeObject(item.get('id'));
+    },
+    addItem(item) {
+      this.get('categories').addObject(item.get('id'))
+    },
     changeCategories(selected) {
-      console.log('selected', selected)
+      console.warn('use ember paper chips: http://miguelcobain.github.io/ember-paper/release-1/#/components/chips');
+      console.log('selected', selected);
       this.set('categories', selected.mapBy('id'));
       // this.transitionToRoute({ queryParams: { categories } });
     },

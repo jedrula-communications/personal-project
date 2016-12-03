@@ -1,2 +1,2 @@
 {{paper-input label="title" value=title onChange=(action (mut title))}}
-{{#paper-button raised=true onClick=(action submit title)}}Submit{{/paper-button}}
+{{#paper-button raised=true onClick=(action (pipe submit (action (mut title ""))) title)}}Submit{{/paper-button}}

@@ -3,7 +3,7 @@
 
 {{blog-post-form
     title=model.post.title
-    categories=model.post.categories
+    formCategories=(map-by 'id' model.post.categories)
     availableCategoryRecords=model.categories
     body=model.post.body
     save=(route-action 'put' model.post)

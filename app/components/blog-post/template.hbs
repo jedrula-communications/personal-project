@@ -1,18 +1,40 @@
-{{#paper-item class="md-3-line"}}
-  <div class="md-list-item-text">
-    <h3>{{#link-to 'post' post}}{{post.title}}{{/link-to}}</h3>
-    <ul>
-      {{#each post.categories as |category|}}
-        <li>{{category.title}}</li>
-      {{/each}}
-    </ul>
-    <p>
-      {{markdown-to-html post.body}}
-    </p>
-  </div>
-  {{paper-divider}}
-  {{#if showActionButtons}}
-    {{#link-to 'post.edit' post class='md-button'}}Edit{{/link-to}}
-    {{#paper-button click=(route-action "remove" post)}}Delete{{/paper-button}}
-  {{/if}}
-{{/paper-item}}
+{{#paper-card as |card|}}
+  {{#card.title as |title|}}
+    {{#title.text as |text|}}
+      {{#text.headline}}
+        {{#link-to 'post' post}}{{post.title}}{{/link-to}}
+      {{/text.headline}}
+      {{#text.subhead}}
+        {{#paper-chips
+          readOnly=true
+          content=post.categories as |category|
+        }}
+          {{#link-to 'blog' (query-params categories=(array category.id))}}
+            {{category.title}}
+          {{/link-to}}
+        {{/paper-chips}}
+      {{/text.subhead}}
+    {{/title.text}}
+  {{/card.title}}
+  {{#card.content class="layout-row layout-align-space-between"}}
+    <div class="card-content-inner">
+      <div class="{{if listView "limitted"}}">
+        {{markdown-to-html
+          markdown=post.body
+          extensions='targetblank'
+        }}
+      </div>
+      {{#if listView}}
+        <div class="read-more">
+          {{#link-to 'post' post}}read full post{{/link-to}}
+        </div>
+      {{/if}}
+    </div>
+    {{#if showActionButtons}}
+      {{#card.actions class="layout-column"}}
+        {{#link-to 'post.edit' post class='md-button'}}Edit{{/link-to}}
+        {{#paper-button click=(route-action "remove" post)}}Delete{{/paper-button}}
+      {{/card.actions}}
+    {{/if}}
+  {{/card.content}}
+{{/paper-card}}

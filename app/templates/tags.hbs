@@ -1,7 +1,9 @@
 {{#each model as |tag|}}
   {{#paper-item class="md-3-line"}}
     <div class="md-list-item-text">
-      {{tag.title}}
+      {{#link-to 'blog' (query-params categories=(array tag.id))}}
+        {{tag.title}}
+      {{/link-to}}
     </div>
     {{paper-divider}}
     {{#link-to 'tag.edit' tag class='md-button'}}Edit{{/link-to}}

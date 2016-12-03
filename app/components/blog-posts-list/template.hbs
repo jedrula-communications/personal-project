@@ -1,5 +1,11 @@
-{{#paper-list}}
+<div class="layout-row layout-wrap">
   {{#each posts as |post|}}
-    {{blog-post post=post}}
+    <div class="flex-gt-sm-33 flex-100">
+      {{blog-post
+        post=post
+        listView=true
+        showActionButtons=showActionButtons
+      }}
+    </div>
   {{/each}}
-{{/paper-list}}
+</div>

@@ -11,7 +11,12 @@ export default Ember.Route.extend({
   },
   actions: {
     put(post, data) {
-      return post.save(data).then(() => this.transitionTo('post', post));
+      // TODO dry this map function or simply pass records up
+      data.categories = data.categories.map((categoryId) => {
+        return this.get('store').peekRecord('tag', categoryId);
+      });
+      post.setProperties(data);
+      post.save().then(() => this.transitionTo('post', post));
     },
   }
 });

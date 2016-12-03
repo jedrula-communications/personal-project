@@ -5,7 +5,7 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     'ember-composable-helpers': {
-      only: [/* 'find-by' */],
+      only: ['array', 'map-by', 'pipe'],
     },
   });
 
