@@ -1,25 +1,29 @@
-{{paper-input label="Title" value=title onChange=(action (mut title))}}
-<div><label>categories:</label></div>
+<div class="layout layout-row">
+  <div class="flex-50">
+    {{paper-input label="Title" value=title onChange=(action (mut title))}}
+    <div><label>categories:</label></div>
 
-{{tags-multiselect
-  categories=formCategories
-  availableCategoryRecords=availableCategoryRecords
-  addItem=(action "addItem")
-  removeItem=(action "removeItem")
-  placeholder="Add a tag"
-}}
+    {{tags-multiselect
+      categories=formCategories
+      availableCategoryRecords=availableCategoryRecords
+      addItem=(action "addItem")
+      removeItem=(action "removeItem")
+      placeholder="Add a tag"
+    }}
 
-{{paper-input
-  textarea=true
-  label="body"
-  value=body
-  onChange=(action (mut body))
-  block=true
-}}
+    {{paper-input
+      textarea=true
+      label="body"
+      value=body
+      onChange=(action (mut body))
+      block=true
+    }}
 
-{{#paper-button raised=true onClick=(action "submit")}}Submit{{/paper-button}}
+    {{#paper-button raised=true onClick=(action "submit")}}Submit{{/paper-button}}
+  </div>
 
-
-<h3>Preview</h3>
-
-{{blog-post post=(hash body=body title=title categories=formCategories)}}
+  <div class="flex-50">
+    <h3>Preview</h3>
+    {{blog-post post=(hash body=body title=title categories=formCategories)}}
+  </div>
+</div>
