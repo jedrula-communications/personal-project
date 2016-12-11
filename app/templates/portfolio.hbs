@@ -1,11 +1,3 @@
-{{!--
-<h1>Education</h1>
-{{#each model.education as |stage|}}
-  <article>
-    {{stage.from}} - {{stage.to}}
-  </article>
-{{/each}}
-{{paper-divider}} --}}
 <div class="layout-column layout-align-space-between-center portfolio">
   {{#paper-card class="portfolio-card" as |card|}}
     {{#card.title as |title|}}
@@ -30,9 +22,30 @@
         {{/card.actions}}
       {{/each}}
     {{/card.content}}
-    {{!-- {{#card.actions}}
-      {{#paper-button}}Action 1{{/paper-button}}
-      {{#paper-button}}Action 2{{/paper-button}}
-    {{/card.actions}} --}}
+  {{/paper-card}}
+
+  {{#paper-card class="portfolio-card" as |card|}}
+    {{#card.title as |title|}}
+      {{#title.text as |text|}}
+        {{#text.headline}}Career{{/text.headline}}
+        {{#text.subhead}}Positions{{/text.subhead}}
+      {{/title.text}}
+      {{paper-icon "computer" size=122}}
+    {{/card.title}}
+    {{#card.content}}
+      {{#each model.positions as |stage|}}
+        {{paper-divider}}
+        <p>
+          {{stage.from}} - {{stage.to}}
+        </p>
+        <p>
+          {{{stage.what}}}
+        </p>
+        <br>
+        {{#card.actions}}
+          {{#paper-button href=stage.link.href target="_blank"}}{{stage.link.what}}{{/paper-button}}
+        {{/card.actions}}
+      {{/each}}
+    {{/card.content}}
   {{/paper-card}}
 </div>

@@ -11,7 +11,11 @@ export default Ember.Route.extend({
           password,
       };
       const authenticator = 'authenticator:token';
-      this.get('session').authenticate(authenticator, credentials);
+      return this.get('session')
+        .authenticate(authenticator, credentials)
+        .then(() => {
+          this.transitionTo('blog');
+        })
       // TODO push payload user ?
     }
   }

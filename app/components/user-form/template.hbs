@@ -12,5 +12,9 @@
     onChange=(action (mut password))}}
   {{/form.input}}
 
-  {{#paper-button type="submit" click=(action submitAction identification password) raised=true primary=true}}Submit{{/paper-button}}
+  {{#paper-button type="submit" click=(action 'submitted' identification password) raised=true primary=true}}Submit{{/paper-button}}
 {{/paper-form}}
+
+{{#if error}}
+  <div class="error">error occured when logging in</div>
+{{/if}}

@@ -24,37 +24,92 @@ export default Ember.Route.extend({
           }
         }
       ],
-      techSkills: {
-        dbs: ['mongoDb', 'MySql'],
-        languages: ['javascript', 'php', 'ruby'],
-        frameworks: ['Ember.js', 'express.js']
-      },
-      projects: [
+      positions: [
         {
           type: 'part-time',
           from: 2016,
-          to: '-',
+          to: 'current position',
           company: 'airhelp',
-          link: 'www.airhelp.com',
+          link: {
+            what: 'airhelp app page',
+            href: 'https://app.airhelp.com/claims/new/trip-details',
+          },
           references: 'todo (Rafal?)',
           what: 'Web application to help air passengers get compensation from airlines when their flight has been cancelled, delayed or overbooked. ',
           // responsibilities?
           technologies: ['Ember.js', 'ember-cli', 'ember-data', 'Ruby on Rails', 'git', 'github', 'teamcity'],
         },
         {
+          type: 'part-time',
+          from: 2016,
+          to: 2016,
+          company: 'toptal',
+          link: {
+            what: 'custom CMS for creating music album pages',
+            href: 'http://listen.carlinnashville.com/blairealise/code',
+          },
+          references: 'katrinatsang@carlinnashville.com',
+          what: `CMS that allows the administrator to quickly generate page that promotes chosen music album / artist.
+                The CMS allows to upload album cover, adjust the color theme, manage playable audio files and their order`,
+          // responsibilities?
+          technologies: ['Express.js', 'node.js', 'jade', 'AWS S3', 'github', 'git', 'heroku'],
+        },
+        {
+          type: 'part-time',
+          from: 2016,
+          to: 2016,
+          company: 'toptal',
+          link: {
+            what: 'page for amatour racing enthusiasts',
+            href: 'oncircuit.co.uk',
+          },
+          references: 'steveupr@gmail.com',
+          what: 'Web application for racing enthusiasts. Features like renting cars, picking races from calendars, managing profiles. Seperate panels for race managers, photographers, master admins.',
+          // responsibilities?
+          technologies: ['Express.js', 'node.js', 'jade', 'github', 'git', 'github issues'],
+        },
+        {
           type: 'side project',
           from: 2015,
           to: 2015,
           company: 'Communications (own project)',
-          what: 'single page web application for travellers',
-          link: 'todo',
+          what: `
+            Single page web application for travellers,<br>
+            this was really a training ground where I got to know Ember.js.
+          `,
+          link: {
+            what: 'Flyoffers page',
+            href: 'http://flyoffers.herokuapp.com/posts',
+          },
           responsibilities: 'Programming and managing the hosting of the application',
           tasks: 'everything ;)',
-          technologies: ['Ember.js', 'ember-cli', 'ember-data', 'Express.js', 'Openshift', 'github', 'heroku'],
+          technologies: ['cloudinary','Ember.js', 'ember-cli', 'ember-data', 'Express.js', 'Openshift', 'github', 'heroku'],
         },
-        // TODO
+        {
+          type: 'full time',
+          from: 2013,
+          to: 2015,
+          company: 'Kelvion',
+          references: 'Abhishek.Mukherjee@kelvion.com',
+          // TODO add more decrtiption
+          what: `
+            Heat exchangers configurator
+          `,
+          link: {
+            what: 'Kueba Select configurator',
+            href: 'https://select.hx.gea.com/login',
+          },
+          responsibilities: 'Full stack development, team pilot',
+          // tasks: 'everything ;)',
+          technologies: ['javascript','Tacton', 'Jenkins', 'Java', 'node.js', 'gulp', 'babel'],
+        },
+        // TODO add more
       ],
-
+      techSkills: {
+        dbs: ['mongoDb', 'MySql'],
+        languages: ['javascript', 'php', 'ruby'],
+        frameworks: ['Ember.js', 'express.js']
+      },
     }
   }
 });

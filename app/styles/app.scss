@@ -2,34 +2,43 @@
 @import 'ember-paper';
 @import 'pod-styles';
 
+body, html {
+  min-height: 100vh;
+}
+
 body {
-  background: #e9eaed;
+  
 }
 
 // FIXME remove this hack and fix styling
-md-virtual-repeat-container {
-  width: 300px;
-}
+// md-virtual-repeat-container {
+//   width: 300px;
+// }
 
-.portfolio {
-  margin-top: -50px;
-  position: relative;
-  z-index: 2;
-}
+// .portfolio {
+//   margin-top: -50px;
+//   position: relative;
+//   z-index: 2;
+// }
 
 
 .portfolio-card {
+  background: #e9eaed;
   max-width: 100%;
   width: 600px;
 }
 
-.ember-basic-dropdown {
-    width: 240px;
-    input[type="search"] {
-        width: 94%;
-    }
-}
+// .ember-basic-dropdown {
+//     width: 240px;
+//     input[type="search"] {
+//         width: 94%;
+//     }
+// }
 
 .not-focused:hover {
   background-color: inherit !important;
+}
+
+.error {
+  color: red;
 }
