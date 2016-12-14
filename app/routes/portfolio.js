@@ -37,7 +37,7 @@ export default Ember.Route.extend({
           references: 'todo (Rafal?)',
           what: 'Web application to help air passengers get compensation from airlines when their flight has been cancelled, delayed or overbooked. ',
           // responsibilities?
-          technologies: ['Ember.js', 'ember-cli', 'ember-data', 'Ruby on Rails', 'git', 'github', 'teamcity'],
+          technologies: ['ember', 'ember-cli', 'ember-data', 'Ruby on Rails', 'git', 'github', 'teamcity'],
         },
         {
           type: 'part-time',
@@ -52,7 +52,7 @@ export default Ember.Route.extend({
           what: `CMS that allows the administrator to quickly generate page that promotes chosen music album / artist.
                 The CMS allows to upload album cover, adjust the color theme, manage playable audio files and their order`,
           // responsibilities?
-          technologies: ['Express.js', 'node.js', 'jade', 'AWS S3', 'github', 'git', 'heroku'],
+          technologies: ['express', 'node', 'jade', 'AWS S3', 'github', 'git', 'heroku'],
         },
         {
           type: 'part-time',
@@ -61,12 +61,12 @@ export default Ember.Route.extend({
           company: 'toptal',
           link: {
             what: 'page for amatour racing enthusiasts',
-            href: 'oncircuit.co.uk',
+            href: 'http://www.oncircuit.co.uk',
           },
           references: 'steveupr@gmail.com',
           what: 'Web application for racing enthusiasts. Features like renting cars, picking races from calendars, managing profiles. Seperate panels for race managers, photographers, master admins.',
           // responsibilities?
-          technologies: ['Express.js', 'node.js', 'jade', 'github', 'git', 'github issues'],
+          technologies: ['express', 'node', 'jade', 'github', 'git', 'github issues'],
         },
         {
           type: 'side project',
@@ -83,7 +83,7 @@ export default Ember.Route.extend({
           },
           responsibilities: 'Programming and managing the hosting of the application',
           tasks: 'everything ;)',
-          technologies: ['cloudinary','Ember.js', 'ember-cli', 'ember-data', 'Express.js', 'Openshift', 'github', 'heroku'],
+          technologies: ['cloudinary','ember', 'ember-cli', 'ember-data', 'Express.js', 'Openshift', 'github', 'heroku'],
         },
         {
           type: 'full time',
@@ -101,14 +101,14 @@ export default Ember.Route.extend({
           },
           responsibilities: 'Full stack development, team pilot',
           // tasks: 'everything ;)',
-          technologies: ['javascript','Tacton', 'Jenkins', 'Java', 'node.js', 'gulp', 'babel'],
+          technologies: ['javascript','Tacton', 'Jenkins', 'Java', 'node', 'gulp', 'babel'],
         },
         // TODO add more
       ],
       techSkills: {
         dbs: ['mongoDb', 'MySql'],
         languages: ['javascript', 'php', 'ruby'],
-        frameworks: ['Ember.js', 'express.js']
+        frameworks: ['ember', 'express']
       },
     }
   }
