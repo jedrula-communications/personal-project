@@ -17,7 +17,7 @@ export default Component.extend({
       this.get('formCategories').removeObject(item.get('id'));
     },
     addItem(item) {
-      this.get('formCategories').addObject(item.get('id'))
+      this.get('formCategories').addObject(item.get('id'));
     },
-  }
+  },
 });

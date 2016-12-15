@@ -110,6 +110,6 @@ export default Ember.Route.extend({
         languages: ['javascript', 'php', 'ruby'],
         frameworks: ['ember', 'express']
       },
-    }
+    };
   }
 });

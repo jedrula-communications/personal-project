@@ -15,7 +15,7 @@ export default Ember.Route.extend({
         .authenticate(authenticator, credentials)
         .then(() => {
           this.transitionTo('blog');
-        })
+        });
       // TODO push payload user ?
     }
   }

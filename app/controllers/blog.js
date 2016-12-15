@@ -25,7 +25,7 @@ export default Controller.extend(sessionControllerMixin, {
       this.get('categories').removeObject(item.get('id'));
     },
     addItem(item) {
-      this.get('categories').addObject(item.get('id'))
+      this.get('categories').addObject(item.get('id'));
     },
     changeCategories(selected) {
       console.warn('use ember paper chips: http://miguelcobain.github.io/ember-paper/release-1/#/components/chips');

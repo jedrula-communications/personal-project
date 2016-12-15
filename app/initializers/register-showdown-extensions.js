@@ -1,6 +1,6 @@
 // courtesy of https://github.com/cybercase/showdown-target-blank/blob/master/src/target_blank.js
 export function initialize() {
-  showdown.extension("targetblank", function() {
+  window.showdown.extension("targetblank", function() {
     return [
          {
             type:   'output',

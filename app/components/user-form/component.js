@@ -6,7 +6,7 @@ export default Ember.Component.extend({
       submitted(identification, password) {
         this.get('submitAction')(identification, password).catch(() => {
           this.set('error', true);
-        })
-      }
-    }
+        });
+      },
+    },
 });
