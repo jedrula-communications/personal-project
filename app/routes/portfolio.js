@@ -31,7 +31,7 @@ export default Ember.Route.extend({
           to: 'current position',
           company: 'airhelp',
           link: {
-            what: 'airhelp app page',
+            what: 'airhelp app',
             href: 'https://app.airhelp.com/claims/new/trip-details',
           },
           references: 'todo (Rafal?)',
@@ -93,7 +93,11 @@ export default Ember.Route.extend({
           references: 'Abhishek.Mukherjee@kelvion.com',
           // TODO add more decrtiption
           what: `
-            Heat exchangers configurator
+            Heat exchangers configurator,<br>
+            It has been 2 years where I worked for a big German company in the Heat Exchange sector.
+            I worked with a customized framework which we extended using javascript and java plugins,
+            after about 1 year I became a team pilot and was responsible for coordinating the work of the Polish team.
+            I was in charge of recruiting and tutoring newcomers.
           `,
           link: {
             what: 'Kueba Select configurator',
@@ -103,7 +107,24 @@ export default Ember.Route.extend({
           // tasks: 'everything ;)',
           technologies: ['javascript','Tacton', 'Jenkins', 'Java', 'node', 'gulp', 'babel'],
         },
-        // TODO add more
+        {
+          type: 'full time',
+          from: 2009,
+          to: 2013,
+          company: 'vazco',
+          references: 'michal.zacher@vazco.eu', // TODO finish
+          // TODO add more decrtiption
+          what: `
+            customized social networks from which the biggest was velocitychess.com
+          `,
+          link: {
+            what: 'online chess gaming app',
+            href: 'http://www.velocitychess.com',
+          },
+          responsibilities: 'Full stack development, team pilot',
+          // tasks: 'everything ;)',
+          technologies: ['javascript','Tacton', 'Jenkins', 'Java', 'node', 'gulp', 'babel'],
+        },
       ],
       techSkills: {
         dbs: ['mongoDb', 'MySql'],

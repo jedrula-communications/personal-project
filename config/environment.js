@@ -45,7 +45,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.APP.API_SERVER_URL = 'https://e0bd615b.ngrok.io';
+    ENV.APP.API_SERVER_URL = 'https://77599829.ngrok.io';
   }
 
   ENV['ember-simple-auth'] = {
