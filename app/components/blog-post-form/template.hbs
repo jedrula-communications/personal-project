@@ -1,5 +1,6 @@
 <div class="layout layout-row">
-  <div class="flex-50">
+  {{!-- <div class="flex-50"> --}}
+  <div class="flex-100">
     {{paper-input label="Title" value=title onChange=(action (mut title))}}
     <div><label>categories:</label></div>
 
@@ -22,8 +23,8 @@
     {{#paper-button raised=true onClick=(action "submit")}}Submit{{/paper-button}}
   </div>
 
-  <div class="flex-50">
+  {{!-- <div class="flex-50">
     <h3>Preview</h3>
     {{blog-post post=(hash body=body title=title categories=formCategories)}}
-  </div>
+  </div> --}}
 </div>
