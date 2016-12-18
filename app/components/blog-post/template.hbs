@@ -17,24 +17,25 @@
     {{/title.text}}
   {{/card.title}}
   {{#card.content class="layout-row layout-align-space-between"}}
-    <div class="card-content-inner">
-      <div class="{{if listView "limitted"}}">
-        {{markdown-to-html
-          markdown=post.body
-          extensions='targetblank'
-        }}
+    {{#if listView}}
+      <div class="read-more">
+        {{#link-to 'post' post}}read full post{{/link-to}}
       </div>
-      {{#if listView}}
-        <div class="read-more">
-          {{#link-to 'post' post}}read full post{{/link-to}}
+    {{else}}
+      <div class="card-content-inner">
+        <div class="{{if listView "limitted"}}">
+          {{markdown-to-html
+            markdown=post.body
+            extensions='targetblank'
+          }}
         </div>
+      </div>
+      {{#if showActionButtons}}
+        {{#card.actions class="layout-column"}}
+          {{#link-to 'post.edit' post class='md-button'}}Edit{{/link-to}}
+          {{#paper-button click=(route-action "remove" post)}}Delete{{/paper-button}}
+        {{/card.actions}}
       {{/if}}
-    </div>
-    {{#if showActionButtons}}
-      {{#card.actions class="layout-column"}}
-        {{#link-to 'post.edit' post class='md-button'}}Edit{{/link-to}}
-        {{#paper-button click=(route-action "remove" post)}}Delete{{/paper-button}}
-      {{/card.actions}}
     {{/if}}
   {{/card.content}}
 {{/paper-card}}
