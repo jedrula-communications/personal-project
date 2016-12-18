@@ -13,6 +13,13 @@ export default Service.extend({
     }
   }),
 
+  login(credentials) {
+    const authenticator = 'authenticator:token';
+    return this.get('session')
+      .authenticate(authenticator, credentials);
+    // TODO push payload user ?
+  },
+
   //TODO this is copypasta from jwt from ember-simple-auth-token
   //https://github.com/jpadilla/ember-simple-auth-token/blob/c17ccf8b4ac95c348180e74279bde161a02636e5/addon/authenticators/jwt.js
   //could probably import it somehow

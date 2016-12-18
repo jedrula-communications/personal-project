@@ -1,13 +1,22 @@
 import Ember from 'ember';
 
-export default Ember.Route.extend({
+const { inject: { service }, Route } = Ember;
+
+export default Route.extend({
+  sessionAccount: service(),
   actions: {
     register(identification, password) {
       const credentials = {
           identification,
           password,
       };
-      this.get('store').createRecord('user', credentials).save();
+      return this.get('store')
+        .createRecord('user', credentials)
+        .save()
+        .then(() => this.get('sessionAccount').login(credentials))
+        .then(() => {
+          this.transitionTo('blog');
+        });
     }
   }
 });
