@@ -1,7 +1,8 @@
 import Ember from 'ember';
-const { Route } = Ember;
+const { Route, inject: { service } } = Ember;
 
 export default Route.extend({
+  sessionAccount: service(),
   model() {
     return this.get('store').findAll('tag');
   },
@@ -11,6 +12,7 @@ export default Route.extend({
       form.categories = form.categories.map((categoryId) => {
         return this.get('store').peekRecord('tag', categoryId);
       });
+      form.author = this.get('sessionAccount.currentUserRecord');
       const newPost = this.get('store').createRecord('post', form);
       return newPost.save()
         .then(() => {

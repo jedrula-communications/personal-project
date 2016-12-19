@@ -1,11 +1,12 @@
 import Ember from 'ember';
 
-const { inject: { service }, Service } = Ember;
+const { computed, inject: { service }, Service } = Ember;
 
 export default Service.extend({
   session: service(),
+  store: service(),
 
-  token: Ember.computed('session.data.authenticated', function() {
+  token: computed('session.data.authenticated', function() {
     const encoded = this.get('session.data.authenticated.token');
     if(encoded) {
       const token =  this.getTokenData(encoded);
@@ -13,11 +14,28 @@ export default Service.extend({
     }
   }),
 
+  // currentUserId: 'b98dd97d-ef5d-454e-8bc5-90858d9b8003',
+  currentUserId: computed.reads('token.id'),
+
+  currentUserRecord: computed('currentUserId', function() {
+    const id = this.get('currentUserId');
+    return this.get('store').peekRecord('user', id);
+  }),
+
   login(credentials) {
     const authenticator = 'authenticator:token';
     return this.get('session')
-      .authenticate(authenticator, credentials);
-    // TODO push payload user ?
+      .authenticate(authenticator, credentials)
+      .then(() => {
+        // TODO return user object in jwt and use push payload ?
+        const currentUserId = this.get('currentUserId');
+        this._findCurrentUserRecord()
+      });
+  },
+
+  _findCurrentUserRecord() {
+    const id = this.get('currentUserId');
+    return id && this.get('store').findRecord('user', id);
   },
 
   //TODO this is copypasta from jwt from ember-simple-auth-token

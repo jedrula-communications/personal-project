@@ -14,6 +14,9 @@
           {{/link-to}}
         {{/paper-chips}}
       {{/text.subhead}}
+      {{#text.subhead}}
+        written by: {{post.author.identification}}
+      {{/text.subhead}}
     {{/title.text}}
   {{/card.title}}
   {{#card.content class="layout-row layout-align-space-between"}}
@@ -34,6 +37,7 @@
         {{#card.actions class="layout-column"}}
           {{#link-to 'post.edit' post class='md-button'}}Edit{{/link-to}}
           {{#paper-button click=(route-action "remove" post)}}Delete{{/paper-button}}
+          {{#paper-button click=(route-action "togglePublic" post)}}{{togglePublicAction}}{{/paper-button}}
         {{/card.actions}}
       {{/if}}
     {{/if}}

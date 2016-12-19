@@ -1,8 +1,9 @@
 import Ember from 'ember';
 
-const { RSVP: { hash }} = Ember;
+const { RSVP: { hash }, inject: { service }} = Ember;
 
 export default Ember.Route.extend({
+  sessionAccount: service(),
   model() {
     return hash({
       post: this.modelFor('post'),
@@ -15,6 +16,8 @@ export default Ember.Route.extend({
       data.categories = data.categories.map((categoryId) => {
         return this.get('store').peekRecord('tag', categoryId);
       });
+      // TODO this is probably something we do not want! it overrides author with every edit!
+      data.author = this.get('sessionAccount.currentUserRecord');
       post.setProperties(data);
       post.save().then(() => this.transitionTo('post', post));
     },

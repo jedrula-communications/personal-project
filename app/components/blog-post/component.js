@@ -9,4 +9,7 @@ export default Component.extend({
   html: computed('listView', 'post.body', function() {
     return this.get('listView') ? this.get('trimmedHtml') : this.get('post.body');
   }),
+  togglePublicAction: computed('post.public', function() {
+    return this.get('post.public') ? 'make private' : 'make public';
+  })
 });

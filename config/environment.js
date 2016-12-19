@@ -54,7 +54,7 @@ module.exports = function(environment) {
   };
 
   ENV['ember-simple-auth-token'] = {
-      serverTokenEndpoint: `${ENV.APP.API_SERVER_URL}/tokens`, // TODO spin a new server for auth only, share secret 
+      serverTokenEndpoint: `${ENV.APP.API_SERVER_URL}/tokens`, // TODO spin a new server for auth only, share secret
     };
 
   return ENV;

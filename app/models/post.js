@@ -1,8 +1,10 @@
 import DS from 'ember-data';
-const { attr, hasMany, Model } = DS;
+const { attr, belongsTo, hasMany, Model } = DS;
 
 export default Model.extend({
+  author: belongsTo('user'),
   title: attr('String'),
   body: attr('String'),
   categories: hasMany('tag'),
+  public: attr('boolean'),
 });
