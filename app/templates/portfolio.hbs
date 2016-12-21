@@ -42,6 +42,7 @@
           {{{stage.what}}}
         </p>
         <br>
+        {{skills-list skills=stage.technologies}}
         {{#card.actions}}
           {{#paper-button href=stage.link.href target="_blank"}}{{stage.link.what}}{{/paper-button}}
         {{/card.actions}}
