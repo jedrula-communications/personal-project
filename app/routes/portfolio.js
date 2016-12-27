@@ -4,6 +4,7 @@ export default Ember.Route.extend({
   model() {
     return {
       positions: [
+        // TODO add this page!
         {
           type: 'part-time',
           // TODO use remote in hbs
@@ -11,7 +12,7 @@ export default Ember.Route.extend({
           from: 2016,
           to: 'now',
           company: 'airhelp',
-          icon: 'airhelp',
+          icon: 'airhelp.jpg',
           link: {
             what: 'airhelp app',
             href: 'https://app.airhelp.com/claims/new/trip-details',
@@ -43,7 +44,8 @@ export default Ember.Route.extend({
           from: 2016,
           to: 2016,
           // TODO resize toptal icon
-          company: 'toptal',
+          company: 'carlinnashville',
+          icon: 'toptal.png',
           link: {
             what: 'custom CMS for creating music album pages',
             href: 'http://listen.carlinnashville.com/blairealise/code',
@@ -74,8 +76,8 @@ export default Ember.Route.extend({
           remote: true,
           from: 2016,
           to: 2016,
-          // TODO ask if I can steal the icon
           company: 'oncircuit',
+          icon: 'toptal.png',
           link: {
             what: 'page for amatour racing enthusiasts',
             href: 'http://www.oncircuit.co.uk',
@@ -103,6 +105,7 @@ export default Ember.Route.extend({
           from: 2015,
           to: 2015,
           company: 'Communications (own project)',
+          icon: 'communications.svg',
           what: `Hobby project remote controlled car using nodejs installed on Raspberry PI to listen for controll requests and controlling the DC motors`,
           link: {
             what: 'Remote controlled raspberry PI car',
@@ -128,9 +131,10 @@ export default Ember.Route.extend({
           from: 2015,
           to: 2015,
           company: 'Communications (own project)',
+          icon: 'communications.svg',
           what: `
-            Single page application for travellers,<br>
-            this was really a training ground where I got to know Ember.js.
+            Single page application for travellers.<br>
+            This was really a training ground where I got to know Ember.js.
           `,
           link: {
             what: 'Flyoffers page',
@@ -161,6 +165,7 @@ export default Ember.Route.extend({
           from: 2013,
           to: 2015,
           company: 'Kelvion',
+          icon: 'kelvion.png',
           references: 'Abhishek.Mukherjee@kelvion.com',
           what: `Heat exchangers configurator`,
           link: {
@@ -193,6 +198,7 @@ export default Ember.Route.extend({
           from: 2009,
           to: 2013,
           company: 'vazco',
+          icon: 'vazco.png',
           references: 'michal.zacher@vazco.eu', // TODO finish
           what: `customized social networks from which the biggest was velocitychess.com`,
           link: {

@@ -24,3 +24,21 @@ md-card {
   width: 800px;
   max-width: calc(100% - 18px);
 }
+
+/* Mixin */
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.md-media-customized-icon {
+  width: 50px;
+  @include vertical-align();
+}
+
+md-card-title-text {
+  text-transform: capitalize;
+}
