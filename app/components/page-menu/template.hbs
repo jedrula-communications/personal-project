@@ -1,0 +1,5 @@
+{{#each routes as |routeObj|}}
+  {{#paper-button}}
+    {{#link-to routeObj.route (query-params categories=defaultCategory)}}{{routeObj.route}}{{/link-to}}
+  {{/paper-button}}
+{{/each}}

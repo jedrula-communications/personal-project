@@ -1,11 +1,7 @@
-<div class="layout-row layout-wrap">
-  {{#each posts as |post|}}
-    <div class="flex-gt-sm-33 flex-100">
-      {{blog-post
-        post=post
-        listView=true
-        showActionButtons=showActionButtons
-      }}
-    </div>
-  {{/each}}
-</div>
+{{#each posts as |post|}}
+  {{blog-post
+    post=post
+    listView=true
+    showActionButtons=showActionButtons
+  }}
+{{/each}}

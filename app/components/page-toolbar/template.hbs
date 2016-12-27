@@ -1,21 +1,10 @@
 {{#paper-toolbar as |toolbar|}}
   {{#toolbar.tools}}
-    <h2>Welcome to Jedrula page</h2>
+    {{yield}}
+    Jedrula page
     <span class="flex"></span>
-    {{#paper-button}}
-      {{#link-to 'blog' (query-params categories=defaultCategory)}}blog{{/link-to}}
-    {{/paper-button}}
-    {{#paper-button}}
-      {{#link-to 'portfolio'}}portfolio{{/link-to}}
-    {{/paper-button}}
-    {{#paper-button}}
-      {{#link-to 'skills'}}skills{{/link-to}}
-    {{/paper-button}}
     {{#if isAuthenticated}}
-      {{#paper-button}}
-        {{#link-to 'tags'}}tags{{/link-to}}
-      {{/paper-button}}
-      <h4>{{identification}}</h4>
+      <span>logged in as {{identification}}</span>
       {{#paper-button click=(route-action 'invalidateSession')}}
         {{paper-icon "power-settings-new" size=20}}
       {{/paper-button}}

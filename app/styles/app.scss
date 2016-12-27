@@ -6,34 +6,10 @@ body, html {
   min-height: 100vh;
 }
 
-body {
-  
+[md-font-icon="menu"] {
+  padding: 0 10px;
+  cursor: pointer;
 }
-
-// FIXME remove this hack and fix styling
-// md-virtual-repeat-container {
-//   width: 300px;
-// }
-
-// .portfolio {
-//   margin-top: -50px;
-//   position: relative;
-//   z-index: 2;
-// }
-
-
-.portfolio-card {
-  background: #e9eaed;
-  max-width: 100%;
-  width: 600px;
-}
-
-// .ember-basic-dropdown {
-//     width: 240px;
-//     input[type="search"] {
-//         width: 94%;
-//     }
-// }
 
 .not-focused:hover {
   background-color: inherit !important;
@@ -41,4 +17,10 @@ body {
 
 .error {
   color: red;
+}
+
+// TODO this is not ideal
+md-card {
+  width: 800px;
+  max-width: calc(100% - 18px);
 }

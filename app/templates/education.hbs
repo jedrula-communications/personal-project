@@ -1,0 +1,28 @@
+{{!-- TODO reuse some templateing code between education and portfolio --}}
+{{!-- TODO DRY these layout-column outer divs --}}
+<div class="layout-column layout-align-space-between-center">
+  {{#paper-card as |card|}}
+    {{#card.title as |title|}}
+      {{#title.text as |text|}}
+        {{#text.headline}}Education{{/text.headline}}
+        {{#text.subhead}}After High School{{/text.subhead}}
+      {{/title.text}}
+      {{paper-icon "school" size=122}}
+    {{/card.title}}
+    {{#card.content}}
+      {{#each model as |stage|}}
+        {{paper-divider}}
+        <p>
+          {{stage.from}} - {{stage.to}}
+        </p>
+        <p>
+          {{{stage.what}}}
+        </p>
+        <br>
+        {{#card.actions}}
+          {{#paper-button href=stage.link.href target="_blank"}}{{stage.link.what}}{{/paper-button}}
+        {{/card.actions}}
+      {{/each}}
+    {{/card.content}}
+  {{/paper-card}}
+</div>

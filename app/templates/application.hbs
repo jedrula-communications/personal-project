@@ -1,7 +1,27 @@
-{{page-toolbar
+{{#page-toolbar
   isAuthenticated=isAuthenticated
   identification=token.identification
 }}
-{{#paper-content class="md-padding"}}
-  {{liquid-outlet}}
-{{/paper-content}}
+  {{#paper-sidenav-toggle name="left" as |toggleAction|}}
+    {{paper-icon "menu" classNames="hide-gt-sm" size=20 click=(action toggleAction)}}
+  {{/paper-sidenav-toggle}}
+{{/page-toolbar}}
+{{#paper-sidenav-container}}
+  {{#paper-sidenav
+    class="md-whiteframe-z2"
+    name="left"
+    open=leftSideBarOpen
+    onToggle=(action (mut leftSideBarOpen))
+  }}
+    {{#paper-content}}
+      {{page-menu
+        isAuthenticated=isAuthenticated
+      }}
+    {{/paper-content}}
+  {{/paper-sidenav}}
+  {{#paper-card-content class="flex"}}
+    <div class="layout-fill layout-align-start-center layout-column">
+      {{liquid-outlet}}
+    </div>
+  {{/paper-card-content}}
+{{/paper-sidenav-container}}

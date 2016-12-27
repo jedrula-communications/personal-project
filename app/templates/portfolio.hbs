@@ -1,52 +1,25 @@
-<div class="layout-column layout-align-space-between-center portfolio">
-  {{#paper-card class="portfolio-card" as |card|}}
+{{#each model.positions as |stage|}}
+  {{#paper-card as |card|}}
     {{#card.title as |title|}}
       {{#title.text as |text|}}
-        {{#text.headline}}Education{{/text.headline}}
-        {{#text.subhead}}After High School{{/text.subhead}}
+        {{#text.headline}}{{stage.company}}{{/text.headline}}
+        {{#text.subhead}}{{stage.from}} - {{stage.to}}{{/text.subhead}}
+        {{!-- TODO you might want to move it to the right as here: http://joelcox.io/ --}}
       {{/title.text}}
-      {{paper-icon "school" size=122}}
+      {{!-- TODO use  ="/images/(stage.company) but first sort out issues with jpg vs png extenssions --}}
+      {{title.media size="xs" src="/images/airhelp.jpg" alt="Tomster" title="Tomster"}}
     {{/card.title}}
     {{#card.content}}
-      {{#each model.education as |stage|}}
-        {{paper-divider}}
-        <p>
-          {{stage.from}} - {{stage.to}}
-        </p>
-        <p>
-          {{{stage.what}}}
-        </p>
-        <br>
-        {{#card.actions}}
-          {{#paper-button href=stage.link.href target="_blank"}}{{stage.link.what}}{{/paper-button}}
-        {{/card.actions}}
-      {{/each}}
-    {{/card.content}}
-  {{/paper-card}}
+      <p>
+        {{{stage.what}}}
+      </p>
+      {{responsibilities-list responsibilities=stage.responsibilities}}
+      {{!-- TODO add alt and link blank to technology website --}}
+      {{skills-list skills=stage.technologies class="layout-row layout-align-center-stretch layout-wrap"}}
 
-  {{#paper-card class="portfolio-card" as |card|}}
-    {{#card.title as |title|}}
-      {{#title.text as |text|}}
-        {{#text.headline}}Career{{/text.headline}}
-        {{#text.subhead}}Positions{{/text.subhead}}
-      {{/title.text}}
-      {{paper-icon "computer" size=122}}
-    {{/card.title}}
-    {{#card.content}}
-      {{#each model.positions as |stage|}}
-        {{paper-divider}}
-        <p>
-          {{stage.from}} - {{stage.to}}
-        </p>
-        <p>
-          {{{stage.what}}}
-        </p>
-        <br>
-        {{skills-list skills=stage.technologies}}
-        {{#card.actions}}
-          {{#paper-button href=stage.link.href target="_blank"}}{{stage.link.what}}{{/paper-button}}
-        {{/card.actions}}
-      {{/each}}
+      {{#card.actions}}
+        {{#paper-button href=stage.link.href target="_blank"}}{{stage.link.what}}{{/paper-button}}
+      {{/card.actions}}
     {{/card.content}}
   {{/paper-card}}
-</div>
+{{/each}}
