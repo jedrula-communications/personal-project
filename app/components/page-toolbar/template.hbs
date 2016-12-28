@@ -1,10 +1,12 @@
 {{#paper-toolbar as |toolbar|}}
   {{#toolbar.tools}}
     {{yield}}
-    Jedrula page
+    <span class="hide show-gt-sm">
+      Jedrula page
+    </span>
     <span class="flex"></span>
     {{#if isAuthenticated}}
-      <span>logged in as {{identification}}</span>
+      <span class="hide show-gt-sm">logged in as {{identification}}</span>
       {{#paper-button click=(route-action 'invalidateSession')}}
         {{paper-icon "power-settings-new" size=20}}
       {{/paper-button}}

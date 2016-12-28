@@ -14,6 +14,14 @@
 
     {{paper-input
       textarea=true
+      label="gist"
+      value=gist
+      onChange=(action (mut gist))
+      block=true
+    }}
+
+    {{paper-input
+      textarea=true
       label="body"
       value=body
       onChange=(action (mut body))

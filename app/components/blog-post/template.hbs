@@ -5,41 +5,42 @@
         {{#link-to 'post' post}}{{post.title}}{{/link-to}}
       {{/text.headline}}
       {{#text.subhead}}
-        {{#paper-chips
-          readOnly=true
-          content=post.categories as |category|
-        }}
-          {{#link-to 'blog' (query-params categories=(array category.id))}}
-            {{category.title}}
-          {{/link-to}}
-        {{/paper-chips}}
-      {{/text.subhead}}
-      {{#text.subhead}}
-        written by: {{post.author.identification}}
+        {{post.author.identification}}, 20.04.2016
       {{/text.subhead}}
     {{/title.text}}
+    {{#paper-chips
+      readOnly=true
+      content=post.categories as |category| }}
+      {{#link-to 'blog' (query-params categories=(array category.id))}}
+        {{category.title}}
+      {{/link-to}}
+    {{/paper-chips}}
   {{/card.title}}
   {{#card.content class="layout-row layout-align-space-between"}}
-    {{#if listView}}
-      <div class="read-more">
-        {{#link-to 'post' post}}read full post{{/link-to}}
-      </div>
-    {{else}}
       <div class="card-content-inner">
-        <div class="{{if listView "limitted"}}">
-          {{markdown-to-html
-            markdown=post.body
-            extensions='targetblank'
-          }}
+        <div>
+          {{post.gist}}
         </div>
+
+        {{#if listView}}
+          <div class="read-more">
+            {{#link-to 'post' post}}read full post{{/link-to}}
+          </div>
+        {{else}}
+          <div>
+            {{markdown-to-html
+              markdown=post.body
+              extensions='targetblank'
+            }}
+          </div>
+        {{/if}}
       </div>
       {{#if showActionButtons}}
-        {{#card.actions class="layout-column"}}
+        {{#card.actions class="layout-row"}}
           {{#link-to 'post.edit' post class='md-button'}}Edit{{/link-to}}
           {{#paper-button click=(route-action "remove" post)}}Delete{{/paper-button}}
           {{#paper-button click=(route-action "togglePublic" post)}}{{togglePublicAction}}{{/paper-button}}
         {{/card.actions}}
       {{/if}}
-    {{/if}}
   {{/card.content}}
 {{/paper-card}}

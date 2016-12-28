@@ -7,6 +7,9 @@ module.exports = function(defaults) {
     'ember-composable-helpers': {
       only: ['array', 'map-by', 'pipe'],
     },
+    fingerprint: {
+      enabled: false, // TODO can be harmful... used for now because fingerprinted icons would not show up
+    },
   });
 
   // Use `app.import` to add additional libraries to the generated

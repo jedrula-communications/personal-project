@@ -25,20 +25,21 @@ md-card {
   max-width: calc(100% - 18px);
 }
 
-/* Mixin */
-@mixin vertical-align($position: relative) {
-  position: $position;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+.custom-card-img img {
+  width: 50px !important;
 }
 
-.md-media-customized-icon {
-  width: 50px;
-  @include vertical-align();
-}
-
-md-card-title-text {
+md-card-title-text .md-headline{
   text-transform: capitalize;
 }
+
+// md-toolbar {
+//   height: 70px;
+//   position: fixed;
+//   width: 100%;
+//   top: 0;
+// }
+
+// body {
+//   padding-top: 70px;
+// }

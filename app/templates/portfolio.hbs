@@ -7,7 +7,9 @@
         {{!-- TODO you might want to move it to the right as here: http://joelcox.io/ --}}
       {{/title.text}}
       {{!-- TODO use  ="/images/(stage.company) but first sort out issues with jpg vs png extenssions --}}
-      {{title.media class="portfolio-media" size="customized-icon" src=(concat "/icons/" stage.icon) alt="Tomster" title="Tomster"}}
+      <div class="custom-card-img">
+        <img src={{concat "/icons/" stage.icon}} >
+      </div>
     {{/card.title}}
     {{#card.content}}
       <p>

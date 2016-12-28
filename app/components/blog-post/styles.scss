@@ -1,32 +1,29 @@
+md-card-actions {
+  margin: auto 0;
+}
+.md-chip-content a{
+  text-decoration: inherit;
+}
+a {
+  color: inherit;
+}
 
-& {
-  md-card-actions {
-    margin: auto 0;
-  }
-  .md-chip-content a{
-    text-decoration: inherit;
-  }
+md-card-content p {
   a {
-    color: inherit;
+    text-decoration: underline;
   }
+}
 
-  md-card-content p {
-    a {
-      text-decoration: underline;
-    }
-  }
+.read-more {
+  margin-top: 10px;
+}
 
-  .limitted > p{
-    overflow: hidden;
-    // display: -webkit-box;
-    // -webkit-line-clamp: 3;
-    // -webkit-box-orient: vertical;
-    // height: 50px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
+md-chips-wrap {
+  box-shadow: none !important;
+}
 
-  .read-more {
-    margin-top: 10px;
-  }
+.md-button {
+  min-width: 1px;
+  font-size: 10px;
+  margin: 0 0 !important;
 }
