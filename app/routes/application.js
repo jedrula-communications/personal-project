@@ -14,7 +14,12 @@ export default Route.extend({
     // TODO do we really wnat these actions in application route ?
     remove(post) {
       // TODO I thought we could use this.transitionTo.bind(this,'blog') but it does not work
-      return post.destroyRecord().then(() => this.transitionTo('blog'));
+      if(confirm('are you sure? ')) {
+        return post.destroyRecord().then(() => this.transitionTo('blog'));
+      } else {
+        // TODO maybe a promise ?
+        return false;
+      }
     },
     togglePublic(post) {
       post.toggleProperty('public');
