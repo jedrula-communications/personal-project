@@ -6,7 +6,7 @@
       {{/text.headline}}
       {{#text.subhead}}
         {{!-- TODO use actual date --}}
-        {{post.author.identification}}, 20.04.2016
+        {{post.author.identification}}, {{moment-format post.date 'MM-DD-YYYY'}}
       {{/text.subhead}}
     {{/title.text}}
     {{#paper-chips

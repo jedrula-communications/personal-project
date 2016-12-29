@@ -8,4 +8,5 @@ export default Model.extend({
   gist: attr('String'),
   categories: hasMany('tag'),
   public: attr('boolean'),
+  date: attr('date'),
 });
