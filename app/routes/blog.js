@@ -7,6 +7,9 @@ export default Ember.Route.extend({
     categories: {
       refreshModel: true,
     },
+    public: {
+      refreshModel: true,
+    },
   },
   model(queryParams) {
     return hash({

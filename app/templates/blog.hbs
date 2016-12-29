@@ -13,9 +13,12 @@
       {{#link-to 'create-post'}}Create a blog post{{/link-to}}
     {{/paper-button}}
   </h1>
+  {{#paper-checkbox value=onlyPrivate onChange=(action (mut onlyPrivate))}}
+    Show only private posts
+  {{/paper-checkbox}}
 {{/if}}
 
 {{blog-posts-list
   posts=filteredPosts
-  showActionButtons=isAdmin
+  isAdmin=isAdmin
 }}

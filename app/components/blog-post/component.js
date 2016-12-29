@@ -3,6 +3,7 @@ import { trim } from 'jedrula-app/helpers/trim';
 const { Component, computed } = Ember;
 
 export default Component.extend({
+  classNameBindings: ['post.public:public:private', 'isAdmin'],
   trimmedHtml: computed('post.body', function() {
     return trim([this.get('post.body')]);
   }),

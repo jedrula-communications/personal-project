@@ -27,3 +27,15 @@ md-chips-wrap {
   font-size: 10px;
   margin: 0 0 !important;
 }
+
+&.is-admin {
+  &.public {
+    border-left: 1px solid green;
+    border-bottom: 1px solid green;
+  }
+
+  &.private {
+    border-left: 1px solid red;
+    border-bottom: 1px solid red;
+  }
+}

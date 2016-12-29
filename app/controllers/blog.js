@@ -9,14 +9,16 @@ export default Controller.extend(sessionControllerMixin, {
   availableCategoryRecords: computed.alias('model.availableCategories'),
   categories: A(),
 
-  filteredPosts: computed('categories', 'posts', function() {
+  // TODO finish hide public and hide private if you need that
+  filteredPosts: computed('onlyPrivate', 'categories', 'posts', function() {
+    const onlyPrivate = this.get('onlyPrivate');
     const categories = this.get('categories');
     const posts = this.get('posts');
     return posts.filter((post) => {
-      const postCategories = post.hasMany('categories').ids();
-      return categories.every(function(category) {
-        return postCategories.indexOf(category) !== -1;
-      });
+      if(onlyPrivate && post.get('public')) {
+        return false;
+      }
+      return this._postMatchesCategories(post, categories);
     });
   }),
 
@@ -33,5 +35,10 @@ export default Controller.extend(sessionControllerMixin, {
       this.set('categories', selected.mapBy('id'));
       // this.transitionToRoute({ queryParams: { categories } });
     },
-  }
+  },
+
+  _postMatchesCategories(post, categories) {
+      const postCategories = post.hasMany('categories').ids();
+      return categories.every(category => postCategories.indexOf(category) !== -1);
+  },
 });

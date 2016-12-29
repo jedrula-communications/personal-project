@@ -36,7 +36,7 @@
           </div>
         {{/if}}
       </div>
-      {{#if showActionButtons}}
+      {{#if isAdmin}}
         {{#card.actions class="layout-row"}}
           {{#link-to 'post.edit' post class='md-button'}}Edit{{/link-to}}
           {{#paper-button click=(route-action "remove" post)}}Delete{{/paper-button}}

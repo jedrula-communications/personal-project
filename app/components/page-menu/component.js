@@ -10,7 +10,8 @@ const publicRoutes = [
 ];
 
 const privateRoutes = [
-  { route: 'tags' }
+  { route: 'tags' },
+  { route: 'blog', name: 'public', public: true},
 ];
 
 const allRoutes = publicRoutes.concat(privateRoutes);
@@ -18,6 +19,7 @@ const allRoutes = publicRoutes.concat(privateRoutes);
 export default Component.extend({
   defaultCategory: null,
   routes: computed('isAuthenticated', function() {
-    return this.get('isAuthenticated') ? allRoutes: publicRoutes;
+    const ret = this.get('isAuthenticated') ? allRoutes: publicRoutes;
+    return ret.map(routeObj => Object.assign({}, { name: routeObj.route }, routeObj));
   }),
 });

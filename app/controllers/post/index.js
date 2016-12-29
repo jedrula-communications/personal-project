@@ -8,6 +8,4 @@ import sessionControllerMixin from '../../mixins/session-mixin';
 
 const { Controller, computed } = Ember;
 
-export default Controller.extend(sessionControllerMixin, {
-  showActionButtons: computed.alias('isAdmin'),
-});
+export default Controller.extend(sessionControllerMixin);
