@@ -1,18 +1,22 @@
-{{#paper-form as |form|}}
-  {{#form.input
-    value=identification
-    label="identification"
-    onChange=(action (mut identification))}}
-  {{/form.input}}
+{{#paper-form onSubmit=(action 'submitted' identification password) as |form|}}
+  <form {{action form.onSubmit on="submit"}}>
+    {{#form.input
+      value=identification
+      label="identification"
+      onChange=(action (mut identification))}}
+    {{/form.input}}
 
-  {{#form.input
-    type="password"
-    value=password
-    label="password"
-    onChange=(action (mut password))}}
-  {{/form.input}}
+    {{#form.input
+      type="password"
+      value=password
+      label="password"
+      onChange=(action (mut password))}}
+    {{/form.input}}
 
-  {{#paper-button type="submit" click=(action 'submitted' identification password) raised=true primary=true}}Submit{{/paper-button}}
+    {{#form.submit-button type="submit" raised=true primary=true}}
+      Submit
+    {{/form.submit-button}}
+  </form>
 {{/paper-form}}
 
 {{#if error}}
