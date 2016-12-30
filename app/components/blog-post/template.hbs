@@ -29,9 +29,9 @@
           </div>
         {{else}}
           <div>
+          {{!-- extensions='targetblank' --}}
             {{markdown-to-html
               markdown=post.body
-              extensions='targetblank'
             }}
           </div>
         {{/if}}
