@@ -126,6 +126,7 @@ export default Ember.Route.extend({
             // TODO add
             'raspberrypi',
           ],
+          video: "https://www.youtube.com/embed/1f9zhUSN12Y",
         },
         {
           type: 'side project',

@@ -19,6 +19,17 @@
       {{!-- TODO add alt and link blank to technology website --}}
       {{skills-list skills=stage.technologies class="layout-row layout-align-center-stretch layout-wrap"}}
 
+      {{!-- TODO use component for video --}}
+      {{#if stage.video}}
+        <div class="video-container">
+          <iframe
+            src={{stage.video}}
+            frameborder="0"
+            allowfullscreen>
+          </iframe>
+        </div>
+      {{/if}}
+
       {{#card.actions}}
         {{#paper-button href=stage.link.href target="_blank"}}{{stage.link.what}}{{/paper-button}}
       {{/card.actions}}
