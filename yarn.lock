@@ -2217,9 +2217,9 @@ ember-css-transitions@0.1.8:
   dependencies:
     ember-cli-babel "^5.1.6"
 
-ember-data@^2.10.0:
-  version "2.10.0"
-  resolved "https://registry.yarnpkg.com/ember-data/-/ember-data-2.10.0.tgz#9d6e23ba21ab242afc03a2ac77e8071bc51a5c62"
+ember-data@2.11.0-beta.1:
+  version "2.11.0-beta.1"
+  resolved "https://registry.yarnpkg.com/ember-data/-/ember-data-2.11.0-beta.1.tgz#f6a85709b5c7b95bd17c763be8fe56566c8e3faa"
   dependencies:
     amd-name-resolver "0.0.5"
     babel-plugin-feature-flags "^0.2.1"
@@ -2257,7 +2257,7 @@ ember-getowner-polyfill@1.0.1, ember-getowner-polyfill@~1.0.1:
   dependencies:
     ember-cli-babel "^5.1.5"
 
-ember-getowner-polyfill@1.1.1, ember-getowner-polyfill@^1.0.0, ember-getowner-polyfill@^1.0.1:
+ember-getowner-polyfill@1.1.1, ember-getowner-polyfill@^1.0.0, ember-getowner-polyfill@^1.0.1, ember-getowner-polyfill@^1.1.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/ember-getowner-polyfill/-/ember-getowner-polyfill-1.1.1.tgz#6bb6603827dd2f8f33be2434570a86cc9e5273ff"
   dependencies:
@@ -2417,15 +2417,15 @@ ember-simple-auth-token@2.0.0:
   dependencies:
     ember-cli-babel "^5.1.5"
 
-ember-simple-auth@1.2.0-beta.1:
+"ember-simple-auth@https://github.com/jedrula/ember-simple-auth.git":
   version "1.2.0-beta.1"
-  resolved "https://registry.yarnpkg.com/ember-simple-auth/-/ember-simple-auth-1.2.0-beta.1.tgz#7188fd59e4d077dcfa660990fce555755dc75880"
+  resolved "https://github.com/jedrula/ember-simple-auth.git#66758be1771e222fa2d3e733520b75af3bbd0ec6"
   dependencies:
     ember-cli-babel "^5.1.6"
     ember-cli-import-polyfill "^0.2.0"
     ember-cli-is-package-missing "^1.0.0"
     ember-cookies "^0.0.10"
-    ember-getowner-polyfill "^1.0.1"
+    ember-getowner-polyfill "^1.1.0"
     ember-network "^0.3.0"
     silent-error "^1.0.0"
 
