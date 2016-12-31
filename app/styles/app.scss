@@ -29,7 +29,7 @@ md-card {
   width: 50px !important;
 }
 
-md-card-title-text .md-headline{
+md-card-title-text .md-headline:first-letter{
   text-transform: capitalize;
 }
 
