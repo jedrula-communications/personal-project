@@ -89,6 +89,7 @@ export default Ember.Route.extend({
             'Coordinating the project directly with the end client',
           ],
           technologies: [
+            'cloudinary',
             'express',
             'nodejs',
             'pug',
@@ -121,9 +122,11 @@ export default Ember.Route.extend({
           technologies: [
             'ember',
             'express',
+            'nodejs',
             // TODO add
             'raspberrypi',
           ],
+          video: "https://www.youtube.com/embed/1f9zhUSN12Y",
         },
         {
           type: 'side project',

@@ -1,6 +1,7 @@
-{{#each skills as |skill|}}
-  {{!-- <img src="assets/images/{{skill}}"> --}}
+{{#each skillObjects as |skillObj|}}
   <div class="svg-wrapper">
-    {{inline-svg (concat "svg/" skill)}}
+    <a href={{skillObj.href}} target="_blank" title={{skillObj.skill}}>
+      {{inline-svg skillObj.svgPath}}
+    </a>
   </div>
 {{/each}}
