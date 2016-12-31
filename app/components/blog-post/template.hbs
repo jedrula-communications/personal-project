@@ -5,7 +5,6 @@
         {{#link-to 'post' post}}{{post.title}}{{/link-to}}
       {{/text.headline}}
       {{#text.subhead}}
-        {{!-- TODO use actual date --}}
         {{post.author.identification}}, {{moment-format post.date 'MM-DD-YYYY'}}
       {{/text.subhead}}
     {{/title.text}}
@@ -29,8 +28,8 @@
           </div>
         {{else}}
           <div>
-          {{!-- extensions='targetblank' --}}
             {{markdown-to-html
+              extensions='targetblank'
               markdown=post.body
             }}
           </div>
