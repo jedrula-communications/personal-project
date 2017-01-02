@@ -11,7 +11,7 @@ cd personal-project-master
 echo "installing npm packages (ember)..."
 yarn
 echo "installing bower packages (ember)..."
-bower iember 
+bower i
 echo "building ember"
 ember b --environment=production
 echo "entering bind dir"
