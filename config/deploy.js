@@ -19,9 +19,9 @@ module.exports = function(deployTarget) {
   if (deployTarget === 'lan') {
     ENV.build.environment = 'lan';
     ENV.rsync2 = {
-      host: '192.168.0.135',
       username: 'pi',
-      releasesPath: 'raspberry'
+      host: '192.168.0.135',
+      releasesPath: '/var/www/jedrula-app/'
     }
   }
 
