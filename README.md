@@ -40,7 +40,10 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-Specify what it takes to deploy your app.
+deploy using ember-cli-deploy-rsync2 (you will first need to make sure the id_rsa.pub has been copied to ~/.ssh/authorized_keys)
+```
+ember deploy lan
+```
 
 ## Further Reading / Useful Links
 
