@@ -48,6 +48,12 @@ module.exports = function(environment) {
     ENV.APP.rootElement = '#ember-testing';
   }
 
+  if (environment === 'lan') {
+    // ENV.APP.API_SERVER_URL = 'https://77599829.ngrok.io';
+    // TODO do https!
+    ENV.APP.API_SERVER_URL = 'http://192.168.0.155:4000'
+  }
+
   if (environment === 'production') {
     // ENV.APP.API_SERVER_URL = 'https://77599829.ngrok.io';
     // TODO do https!
