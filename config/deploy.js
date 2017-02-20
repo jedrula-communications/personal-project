@@ -21,7 +21,7 @@ module.exports = function(deployTarget) {
     ENV.rsync2 = {
       username: 'pi',
       host: '192.168.0.135',
-      releasesPath: '/var/www/jedrula-app/'
+      releasesPath: '/home/pi/www/jedrula-app'
     }
   }
 
