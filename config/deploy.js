@@ -27,6 +27,11 @@ module.exports = function(deployTarget) {
 
   if (deployTarget === 'production') {
     ENV.build.environment = 'production';
+    ENV.rsync2 = {
+      username: 'pi',
+      host: '192.168.0.135',
+      releasesPath: '/home/pi/www/jedrula-app'
+    }
     // configure other plugins for production deploy target here
   }
 

@@ -40,10 +40,14 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-deploy using ember-cli-deploy-rsync2 (you will first need to make sure the id_rsa.pub has been copied to ~/.ssh/authorized_keys)
+* sending assets to raspberry pi and spining a fastboot server
+
+deploy assets using ember-cli-deploy-rsync2 (you will first need to make sure the id_rsa.pub has been copied to ~/.ssh/authorized_keys)
 ```
 ember deploy lan
 ```
+
+now you can deploy the fastboot server, see more here: https://github.com/jedrula-communications/ember-fastboot-server
 
 ## Further Reading / Useful Links
 
