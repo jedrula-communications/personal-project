@@ -26,7 +26,7 @@ const skillUrlsMap = {
   svg: 'https://www.w3.org/Graphics/SVG/',
   socketio: 'http://socket.io/',
   javascript: 'https://www.javascript.com/',
-}
+};
 
 export default Component.extend({
   skillObjects: computed('skills', function() {
@@ -35,7 +35,7 @@ export default Component.extend({
         skill,
         svgPath: `svg/${skill}`,
         href: this._getSkillUrl(skill), // TODO make dynamic
-      }
+      };
     });
   }),
   _getSkillUrl(skill) {

@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import jwtDecode from 'jwt-decode';
 
 const { computed, inject: { service }, Service } = Ember;
 
@@ -47,13 +48,16 @@ export default Service.extend({
     @return {object} An object with properties for the session.
   */
   getTokenData(token) {
-    const payload = token.split('.')[1];
-    const tokenData = decodeURIComponent(window.escape(atob(payload)));
+    // const decoded = jwtDecode(token);
+    // console.log('decoded', decoded);
+    // const payload = token.split('.')[1];
+    // const tokenData = decodeURIComponent(window.escape(atob(payload)));
 
-    try {
-      return JSON.parse(tokenData);
-    } catch (e) {
-      return tokenData;
-    }
+    // try {
+    //   return JSON.parse(tokenData);
+    // } catch (e) {
+    //   return tokenData;
+    // }
+    return jwtDecode(token)
   },
 });
