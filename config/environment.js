@@ -23,7 +23,7 @@ module.exports = function(environment) {
     },
 
     fastboot: {
-      hostWhitelist: [/^192.168.0.185:\d+$/, /^78.88.255.144:\d+$/,  /^78.88.253.196:\d+$/, /^localhost:\d+$/],
+      hostWhitelist: [/^88.156.95.104:\d+$/, /^192.168.1.102:\d+$/, /^192.168.0.185:\d+$/, /^78.88.255.144:\d+$/,  /^78.88.253.196:\d+$/, /^localhost:\d+$/],
     }
   };
 

@@ -1,4 +1,4 @@
-/* jshint node: true */
+/* eslint node: true */
 
 module.exports = function(deployTarget) {
   var ENV = {
@@ -20,7 +20,7 @@ module.exports = function(deployTarget) {
     ENV.build.environment = 'lan';
     ENV.rsync2 = {
       username: 'pi',
-      host: '192.168.0.135',
+      host: '192.168.1.102',
       releasesPath: '/home/pi/www/jedrula-app'
     }
   }
@@ -29,7 +29,7 @@ module.exports = function(deployTarget) {
     ENV.build.environment = 'production';
     ENV.rsync2 = {
       username: 'pi',
-      host: '192.168.0.135',
+      host: '192.168.1.102',
       releasesPath: '/home/pi/www/jedrula-app'
     }
     // configure other plugins for production deploy target here
