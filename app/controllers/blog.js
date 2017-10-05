@@ -1,7 +1,7 @@
 import Ember from 'ember';
 import sessionControllerMixin from '../mixins/session-mixin';
 
-const { A, computed, Controller } = Ember;
+const { A, computed, Controller, Logger } = Ember;
 
 export default Controller.extend(sessionControllerMixin, {
   posts: computed.alias('model.posts'),
@@ -30,8 +30,7 @@ export default Controller.extend(sessionControllerMixin, {
       this.get('categories').addObject(item.get('id'));
     },
     changeCategories(selected) {
-      console.warn('use ember paper chips: http://miguelcobain.github.io/ember-paper/release-1/#/components/chips');
-      console.log('selected', selected);
+      Logger.warn('use ember paper chips: http://miguelcobain.github.io/ember-paper/release-1/#/components/chips');
       this.set('categories', selected.mapBy('id'));
       // this.transitionToRoute({ queryParams: { categories } });
     },

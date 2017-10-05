@@ -8,11 +8,12 @@
       {{/title.text}}
       {{!-- TODO use  ="/images/(stage.company) but first sort out issues with jpg vs png extenssions --}}
       <div class="custom-card-img">
-        <img src={{concat "/icons/" stage.icon}} >
+        <img alt="position icon" src={{concat "/icons/" stage.icon}} >
       </div>
     {{/card.title}}
     {{#card.content}}
       <p>
+        {{! template-lint-disable triple-curlies }}
         {{{stage.what}}}
       </p>
       {{responsibilities-list responsibilities=stage.responsibilities}}

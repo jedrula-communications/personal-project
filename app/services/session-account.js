@@ -29,7 +29,6 @@ export default Service.extend({
       .authenticate(authenticator, credentials)
       .then(() => {
         // TODO return user object in jwt and use push payload ?
-        const currentUserId = this.get('currentUserId');
         this._findCurrentUserRecord()
       });
   },

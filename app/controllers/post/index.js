@@ -6,6 +6,6 @@ import Ember from 'ember';
 // TODO maybe we do not need relative paths ?
 import sessionControllerMixin from '../../mixins/session-mixin';
 
-const { Controller, computed } = Ember;
+const { Controller } = Ember;
 
 export default Controller.extend(sessionControllerMixin);
