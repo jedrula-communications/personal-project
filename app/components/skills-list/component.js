@@ -26,6 +26,7 @@ const skillUrlsMap = {
   svg: 'https://www.w3.org/Graphics/SVG/',
   socketio: 'http://socket.io/',
   javascript: 'https://www.javascript.com/',
+  tacton: 'http://www.tacton.com/',
 };
 
 export default Component.extend({

@@ -181,12 +181,12 @@ export default Ember.Route.extend({
             'recruiting and tutoring newcomers',
             'continous deployment  with Jenkins',
             '3rd party integration with Zanata i18n service.',
-            'modeling heat exchangers using'
+            'modeling heat exchangers using tacton'
           ],
           technologies: [
             'javascript',
             // TODO
-            // 'Tacton',
+            'tacton',
             'jenkins',
             'java',
             'jquery',
