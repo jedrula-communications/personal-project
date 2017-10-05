@@ -4,13 +4,67 @@ export default Ember.Route.extend({
   model() {
     return {
       positions: [
-        // TODO add this page!
+        {
+          type: 'part-time',
+          // TODO use remote in hbs
+          remote: true,
+          from: 2017,
+          to: 'now',
+          company: 'Impact DataSource',
+          icon: 'toptal.png',
+          link: {
+            what: 'Impact Dashboard Demo',
+            href: 'https://dashboard.impactdatasource.com/demo',
+          },
+          references: 'todo (Josh?)',
+          what: 'Simple tool that determines the impact of a business to a community',
+          responsibilities: [
+            'Ember migration - rewriting/migrating tests',
+            'Reviewing work of junior Ember devs',
+            'Fixing Ember deprecations',
+            'Optimizing node.js slower parts',
+            'Upgrading node.js with some node modules',
+          ],
+          technologies: [
+            'ember',
+            'nodejs',
+            'mongodb',
+            'git',
+            'github',
+          ],
+        },
+        {
+          type: 'part-time',
+          // TODO use remote in hbs
+          remote: true,
+          from: 2017,
+          to: 'now',
+          company: 'radium',
+          icon: 'radium.png',
+          link: {
+            what: 'radium crm',
+            href: 'https://www.radiumcrm.com/',
+          },
+          references: 'todo (Sami?)',
+          what: 'Customer relationship management tool which syncs with your Gmail account and simplifies dealing with your customers and business contacts.',
+          responsibilities: [
+            'Migrating Ember.js from a legacy version to 1.13 and then 2+',
+            'Simplifing codebase, bringing in best Ember practices',
+            'Optimizing slow parts of Ember app',
+          ],
+          technologies: [
+            'ember',
+            'ror',
+            'git',
+            'github',
+          ],
+        },
         {
           type: 'part-time',
           // TODO use remote in hbs
           remote: true,
           from: 2016,
-          to: 'now',
+          to: 2017,
           company: 'airhelp',
           icon: 'airhelp.jpg',
           link: {
@@ -27,13 +81,9 @@ export default Ember.Route.extend({
           ],
           technologies: [
             'ember',
-            //'ember-cli',
-            //'ember-data',
             'ror',
             'git',
             'github',
-            // TODO png type ?
-            // 'teamcity'
             'aws',
             'scss',
           ],
@@ -48,7 +98,7 @@ export default Ember.Route.extend({
           icon: 'toptal.png',
           link: {
             what: 'custom CMS for creating music album pages',
-            href: 'http://listen.carlinnashville.com/blairealise/code',
+            href: 'http://listen.carlinnashville.com/heartsbeatloud',
           },
           references: 'katrinatsang@carlinnashville.com',
           what: `CMS that allows the administrator to quickly generate page that promotes chosen music album / artist.
@@ -111,7 +161,7 @@ export default Ember.Route.extend({
           link: {
             what: 'Remote controlled raspberry PI car',
             // TODO add something better here
-            href: 'https://github.com/jedrula/remoteraspberrycar/blob/master/car_image.jpg',
+            href: 'https://github.com/jedrula-raspberrycar/remoteraspberrycar',
           },
           responsibilities: [
             'Building the physical car',
@@ -152,8 +202,6 @@ export default Ember.Route.extend({
           technologies: [
             'cloudinary',
             'ember',
-            //'ember-cli',
-            //'ember-data',
             'express',
             //'Openshift',
             'github',
@@ -172,8 +220,8 @@ export default Ember.Route.extend({
           references: 'Abhishek.Mukherjee@kelvion.com',
           what: `Heat exchangers configurator`,
           link: {
-            what: 'Kueba Select configurator',
-            href: 'https://select.hx.gea.com/login',
+            what: 'Kelvion Select configurator',
+            href: 'http://rtselect.kelvion.com/loginKelvion',
           },
           responsibilities: [
             'full stack development using extensible javascript and java custom framework',
@@ -185,7 +233,6 @@ export default Ember.Route.extend({
           ],
           technologies: [
             'javascript',
-            // TODO
             'tacton',
             'jenkins',
             'java',
@@ -193,6 +240,7 @@ export default Ember.Route.extend({
             'nodejs',
             'gulp',
             'babel',
+            // TODO
             // zanata
           ],
         },
@@ -215,7 +263,6 @@ export default Ember.Route.extend({
             'managing services on EC2 AWS',
             'direct communication with clients from all over the world'
           ],
-          // tasks: 'everything ;)',
           technologies: [
             'javascript',
             'knockoutjs',
