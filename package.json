@@ -9,6 +9,7 @@
   },
   "scripts": {
     "build": "ember build",
+    "buildtofastboot": "ember b --environment=production --output-path=../ember-fastboot-server/jedrula-app-dist-only",
     "start": "ember server",
     "test": "ember test"
   },
