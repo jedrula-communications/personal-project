@@ -1,4 +1,5 @@
 {{#page-toolbar
+  class="hide-print"
   isAuthenticated=isAuthenticated
   identification=token.identification
 }}
@@ -8,7 +9,7 @@
 {{/page-toolbar}}
 {{#paper-sidenav-container}}
   {{#paper-sidenav
-    class="md-whiteframe-z2"
+    class="md-whiteframe-z2 hide-print"
     name="left"
     open=leftSideBarOpen
     onToggle=(action (mut leftSideBarOpen))

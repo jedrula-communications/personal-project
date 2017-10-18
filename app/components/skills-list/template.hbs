@@ -1,5 +1,5 @@
-{{#each skillObjects as |skillObj|}}
-  <div class="svg-wrapper">
+{{#each skillObjects as |skillObj index|}}
+  <div class="svg-wrapper {{if (gte index 4) 'hide-print'}}">
     <a href={{skillObj.href}} rel="noopener" target="_blank" title={{skillObj.skill}}>
       {{inline-svg skillObj.svgPath}}
     </a>

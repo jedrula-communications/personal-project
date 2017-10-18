@@ -53,3 +53,50 @@ md-card-title-text .md-headline:first-letter{
   width: auto;
   height: 180px;
 }
+
+.show-print {
+  display: none;
+}
+
+@media print {
+  .show-print {
+    display: block !important;
+  }
+}
+
+.portfolio-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.about-me {
+  max-width: 800px;
+  display: grid;
+  padding: 10px;
+  grid-template-areas: "picture fullname"
+                       "picture description";
+
+  h1 {
+    margin-top: 0;
+  }
+
+  h4 {
+    margin-bottom: 10px;
+  }
+
+  img {
+    width: 200px;
+    grid-area: picture;
+    padding-right: 10px;
+  }
+  .full-name {
+    grid-area: fullname;
+  }
+  .description {
+    grid-area: description;
+    text-align: justify;
+  }
+
+}

@@ -1,4 +1,4 @@
-/* jshint node: true */
+/* eslint node: true */
 
 module.exports = function(environment) {
   var ENV = {
@@ -23,7 +23,7 @@ module.exports = function(environment) {
     },
 
     fastboot: {
-      hostWhitelist: [/^jedrula.ddns.net:\d+$/, /^192.168.1.100:\d+$/, /^88.156.95.104:\d+$/, /^192.168.1.102:\d+$/, /^192.168.0.185:\d+$/, /^78.88.255.144:\d+$/,  /^78.88.253.196:\d+$/, /^localhost:\d+$/],
+      hostWhitelist: [/^jedrula.ddns.net:\d+$/, /^192.168.1.100:\d+$/, /^88.156.95.104:\d+$/, /^192.168.1.102:\d+$/, /^localhost:\d+$/],
     }
   };
 
@@ -49,13 +49,11 @@ module.exports = function(environment) {
   }
 
   if (environment === 'lan') {
-    // ENV.APP.API_SERVER_URL = 'https://77599829.ngrok.io';
     // TODO do https!
-    ENV.APP.API_SERVER_URL = 'http://192.168.0.155:4000'
+    ENV.APP.API_SERVER_URL = 'http://192.168.1.102:4000';
   }
 
   if (environment === 'production') {
-    // ENV.APP.API_SERVER_URL = 'https://77599829.ngrok.io';
     // TODO do https!
     ENV.APP.API_SERVER_URL = 'http://jedrula.ddns.net:4000';
     // ENV.APP.API_SERVER_URL = 'http://88.156.95.104:4000'
@@ -67,8 +65,8 @@ module.exports = function(environment) {
   };
 
   ENV['ember-simple-auth-token'] = {
-      serverTokenEndpoint: `${ENV.APP.API_SERVER_URL}/tokens`, // TODO spin a new server for auth only, share secret
-    };
+    serverTokenEndpoint: `${ENV.APP.API_SERVER_URL}/tokens`, // TODO spin a new server for auth only, share secret
+  };
 
   return ENV;
 };

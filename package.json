@@ -63,6 +63,7 @@
     "ember-route-action-helper": "2.0.0",
     "ember-simple-auth": "https://github.com/jedrula/ember-simple-auth.git",
     "ember-simple-auth-token": "2.0.0",
+    "ember-truth-helpers": "2.0.0",
     "liquid-fire": "0.27.0",
     "loader.js": "^4.0.10",
     "showdown": "1.5.0"
