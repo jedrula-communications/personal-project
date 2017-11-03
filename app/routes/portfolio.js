@@ -129,7 +129,7 @@ export default Ember.Route.extend({
           company: 'oncircuit',
           icon: 'toptal.png',
           link: {
-            what: 'page for amatour racing enthusiasts',
+            what: 'page for amateur racing enthusiasts',
             href: 'http://www.oncircuit.co.uk',
           },
           references: 'steveupr@gmail.com',
@@ -157,7 +157,7 @@ export default Ember.Route.extend({
           to: 2015,
           company: 'Communications (own project)',
           icon: 'communications.svg',
-          what: `Hobby project remote controlled car using nodejs installed on Raspberry PI to listen for controll requests and controlling the DC motors`,
+          what: `Hobby project remote controlled car using nodejs installed on Raspberry PI to listen for control requests and controlling the DC motors`,
           link: {
             what: 'Remote controlled raspberry PI car',
             // TODO add something better here

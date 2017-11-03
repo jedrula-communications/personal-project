@@ -39,3 +39,9 @@ md-chips-wrap {
     border-bottom: 1px solid red;
   }
 }
+
+@media screen and (max-width: 800px) {
+  .categories-chips {
+    display: none;
+  }
+}

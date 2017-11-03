@@ -9,6 +9,7 @@
       {{/text.subhead}}
     {{/title.text}}
     {{#paper-chips
+      class="categories-chips"
       readOnly=true
       content=post.categories as |category| }}
       {{#link-to 'blog' (query-params categories=(array category.id))}}

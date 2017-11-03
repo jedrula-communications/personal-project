@@ -100,3 +100,10 @@ md-card-title-text .md-headline:first-letter{
   }
 
 }
+
+@media screen and (max-width: 600px) {
+  .about-me {
+    grid-template-areas: "fullname fullname"
+                       "picture description";
+  }
+}
