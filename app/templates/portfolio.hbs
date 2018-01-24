@@ -1,57 +1,47 @@
-<div class="portfolio-wrapper">
-  <div class="about-me">
-  <img src="/images/profile-picture.jpeg"/>
-  {{!-- <div class="lolo">lolo</div> --}}
-  <div class="full-name">
-    <h1>Andrzej Swaton</h1>
-    {{!-- <h4>Wroclaw, Poland</h4> --}}
-  </div>
-  <div class="description">
-    I am a full-stack web developer with 7 years of professional experience and a master's degree in computer science. I enjoy working with cutting-edge technologies that make web applications faster and better. I am enthusiastic about JavaScript and love to work with Ember.js and Node.js stack. I know that communication and proactiveness are the keys to productivity when working in multicultural, remote teams.
-  </div>
-</div>
-{{#each model.positions as |stage|}}
-  {{#paper-card as |card|}}
-    {{#card.title as |title|}}
-      {{#title.text as |text|}}
-        {{#text.headline}}{{stage.company}}{{/text.headline}}
-        {{#text.subhead}}{{stage.from}} - {{stage.to}}{{/text.subhead}}
-        {{!-- TODO you might want to move it to the right as here: http://joelcox.io/ --}}
-      {{/title.text}}
-      {{!-- TODO use  ="/images/(stage.company) but first sort out issues with jpg vs png extenssions --}}
-      <div class="custom-card-img">
-        <img alt="position icon" src={{concat "/icons/" stage.icon}} >
-      </div>
-    {{/card.title}}
-    {{#card.content}}
-      <p>
-        {{! template-lint-disable triple-curlies }}
-        {{{stage.what}}}
-      </p>
-      {{responsibilities-list responsibilities=stage.responsibilities}}
-      {{!-- TODO add alt and link blank to technology website --}}
-      {{skills-list skills=stage.technologies class="layout-row layout-align-center-stretch layout-wrap"}}
-
-      {{!-- TODO use component for video --}}
-      {{!-- FIXME print image or remove completey when printing --}}
-      {{#if stage.video}}
-        <div class="video-container hide-print">
-          <iframe
-            src={{stage.video.src}}
-            frameborder="0"
-            allowfullscreen>
-          </iframe>
-          {{!-- style="background-image:url('{{stage.video.backgroundImage}}')" --}}
+<div class="flex-container-center">
+  {{#about-me}}{{/about-me}}
+  {{#each model.positions as |stage|}}
+    {{#paper-card as |card|}}
+      {{#card.title as |title|}}
+        {{#title.text as |text|}}
+          {{#text.headline}}{{stage.company}}{{/text.headline}}
+          {{#text.subhead}}{{stage.from}} - {{stage.to}}{{/text.subhead}}
+          {{!-- TODO you might want to move it to the right as here: http://joelcox.io/ --}}
+        {{/title.text}}
+        {{!-- TODO use  ="/images/(stage.company) but first sort out issues with jpg vs png extenssions --}}
+        <div class="custom-card-img">
+          <img alt="position icon" src={{concat "/icons/" stage.icon}} >
         </div>
-      {{/if}}
+      {{/card.title}}
+      {{#card.content}}
+        <p>
+          {{! template-lint-disable triple-curlies }}
+          {{{stage.what}}}
+        </p>
+        {{responsibilities-list responsibilities=stage.responsibilities}}
+        {{!-- TODO add alt and link blank to technology website --}}
+        {{skills-list skills=stage.technologies class="layout-row layout-align-center-stretch layout-wrap"}}
 
-      {{#card.actions}}
-        {{#paper-button class="hide-print" href=stage.link.href target="_blank"}}{{stage.link.what}}{{/paper-button}}
-        <a class="show-print">{{stage.link.href}}</a>
-      {{/card.actions}}
-    {{/card.content}}
-  {{/paper-card}}
-{{/each}}
+        {{!-- TODO use component for video --}}
+        {{!-- FIXME print image or remove completey when printing --}}
+        {{#if stage.video}}
+          <div class="video-container hide-print">
+            <iframe
+              src={{stage.video.src}}
+              frameborder="0"
+              allowfullscreen>
+            </iframe>
+            {{!-- style="background-image:url('{{stage.video.backgroundImage}}')" --}}
+          </div>
+        {{/if}}
+
+        {{#card.actions}}
+          {{#paper-button class="hide-print" href=stage.link.href target="_blank"}}{{stage.link.what}}{{/paper-button}}
+          <a class="show-print">{{stage.link.href}}</a>
+        {{/card.actions}}
+      {{/card.content}}
+    {{/paper-card}}
+  {{/each}}
 </div>
 
 {{outlet}}

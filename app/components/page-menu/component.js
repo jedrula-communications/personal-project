@@ -6,7 +6,9 @@ const publicRoutes = [
   { route: 'blog' },
   { route: 'education' },
   { route: 'portfolio' },
+  { route: 'tutoring' },
   { route: 'skills' },
+  { route: 'contact' },
 ];
 
 const privateRoutes = [

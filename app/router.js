@@ -27,6 +27,8 @@ Router.map(function() {
   this.route('tags');
   this.route('skills');
   this.route('education');
+  this.route('tutoring');
+  this.route('contact');
 });
 
 export default Router;
