@@ -50,7 +50,7 @@ module.exports = function(environment) {
 
   if (environment === 'lan') {
     // TODO do https!
-    ENV.APP.API_SERVER_URL = 'http://192.168.1.102:4000';
+    ENV.APP.API_SERVER_URL = 'http://192.168.1.201:4000';
   }
 
   if (environment === 'production') {
