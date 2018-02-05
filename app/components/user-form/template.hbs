@@ -1,5 +1,5 @@
 {{#paper-form onSubmit=(action 'submitted' identification password) as |form|}}
-  <form {{action form.onSubmit on="submit"}}>
+  <form onsubmit={{action 'nativeSubmitted' identification password}}>
     {{#form.input
       value=identification
       label="identification"

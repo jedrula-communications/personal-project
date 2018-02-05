@@ -8,5 +8,9 @@ export default Ember.Component.extend({
           this.set('error', true);
         });
       },
+      nativeSubmitted(identification, password, event) {
+        event.preventDefault();
+        this.send('submitted', identification, password)
+      }
     },
 });
