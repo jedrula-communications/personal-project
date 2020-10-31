@@ -35,10 +35,12 @@
           </div>
         {{/if}}
 
-        {{#card.actions}}
-          {{#paper-button class="hide-print" href=stage.link.href target="_blank"}}{{stage.link.what}}{{/paper-button}}
-          <a class="show-print">{{stage.link.href}}</a>
-        {{/card.actions}}
+        {{#unless stage.link.dead}}
+          {{#card.actions}}
+            {{#paper-button class="hide-print" href=stage.link.href target="_blank"}}{{stage.link.what}}{{/paper-button}}
+            <a class="show-print">{{stage.link.href}}</a>
+          {{/card.actions}}
+        {{/unless}}
       {{/card.content}}
     {{/paper-card}}
   {{/each}}

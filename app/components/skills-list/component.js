@@ -27,6 +27,7 @@ const skillUrlsMap = {
   socketio: 'http://socket.io/',
   javascript: 'https://www.javascript.com/',
   tacton: 'http://www.tacton.com/',
+  vue: 'https://vuejs.org/',
 };
 
 export default Component.extend({

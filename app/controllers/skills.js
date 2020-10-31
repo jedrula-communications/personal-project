@@ -5,6 +5,7 @@ export default Ember.Controller.extend({
     'javascript',
     'nodejs',
     'heroku',
+    'vue',
     'ember',
     'git',
     'github',

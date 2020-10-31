@@ -6,10 +6,66 @@ export default Ember.Route.extend({
       positions: [
         {
           type: 'part-time',
+          remote: true,
+          from: 2020,
+          to: 'now',
+          company: 'CardTapp',
+          icon: 'toptal.png',
+          link: {
+            what: 'CardTapp',
+            href: 'https://www.cardtapp.com',
+          },
+          references: '', // TODO, later
+          what: 'Virtual Client Engagement Platform',
+          responsibilities: [
+            'Ember.js development',
+            'Ember addons development for code shared between projects',
+            'jQuery datatables integration with Ember.js',
+            'Broad Integration and acceptance testing',
+          ],
+          technologies: [
+            'ember',
+            'nodejs',
+            'mongodb',
+            // 'ruby', TODO add ruby or RoR to skills
+            'jquery',
+            'github',
+          ],
+        },
+        {
+          type: 'full time',
+          remote: true,
+          from: 2017,
+          to: 2020,
+          company: 'Diligen',
+          icon: 'toptal.png',
+          link: {
+            what: 'Diligen',
+            href: 'https://www.diligen.com',
+          },
+          references: 'todo (Konrad?)',
+          what: 'AI powered contract review app.',
+          responsibilities: [
+            'Vue.js rewrite',
+            'Rewrite of custom build pipeline to standard latest vue-cli',
+            'Pdf.js integration with Vue.js',
+            'Node.js business logic development',
+            'End to end testing with puppeteer',
+          ],
+          technologies: [
+            'vue',
+            'nodejs',
+            // 'postgresql',
+            'git',
+            'github',
+          ],
+        },
+        {
+          type: 'part-time',
           // TODO use remote in hbs
           remote: true,
           from: 2017,
-          to: 'now',
+          to: 2017,
           company: 'Impact DataSource',
           icon: 'toptal.png',
           link: {
@@ -38,7 +94,7 @@ export default Ember.Route.extend({
           // TODO use remote in hbs
           remote: true,
           from: 2017,
-          to: 'now',
+          to: 2017,
           company: 'radium',
           icon: 'radium.png',
           link: {
@@ -99,6 +155,7 @@ export default Ember.Route.extend({
           link: {
             what: 'custom CMS for creating music album pages',
             href: 'http://listen.carlinnashville.com/heartsbeatloud',
+            dead: true,
           },
           references: 'katrinatsang@carlinnashville.com',
           what: `CMS that allows the administrator to quickly generate page that promotes chosen music album / artist.
@@ -224,7 +281,7 @@ export default Ember.Route.extend({
           what: `Heat exchangers configurator`,
           link: {
             what: 'Kelvion Select configurator',
-            href: 'http://rtselect.kelvion.com/loginKelvion',
+            href: 'https://www.kelvion.com/company/fairs-media/tools-software',
           },
           responsibilities: [
             'full stack development using extensible javascript and java custom framework',
@@ -246,6 +303,9 @@ export default Ember.Route.extend({
             // TODO
             // zanata
           ],
+          video: {
+            src: "https://www.youtube.com/embed/8kzb_I3YOt8",
+          },
         },
         {
           type: 'full time',
@@ -257,7 +317,7 @@ export default Ember.Route.extend({
           what: `customized social networks from which the biggest was velocitychess.com`,
           link: {
             what: 'online chess gaming app',
-            href: 'http://www.velocitychess.com',
+            href: 'https://www.facebook.com/VelocityChess',
           },
           responsibilities: [
             'Full stack web development',
