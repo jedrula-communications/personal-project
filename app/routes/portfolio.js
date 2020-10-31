@@ -275,6 +275,9 @@ export default Ember.Route.extend({
             'socketio',
             'mongodb',
           ],
+          video: {
+            src: "https://www.youtube.com/embed/U1uoj0JpRaU",
+          },
         },
       ],
       techSkills: {
