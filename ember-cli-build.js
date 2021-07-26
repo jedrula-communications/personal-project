@@ -4,6 +4,9 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   const app = new EmberApp(defaults, {
+    'ember-cli-babel': {
+      includePolyfill: true
+    },
     'ember-composable-helpers': {
       only: ['array', 'map-by', 'pipe'],
     },

@@ -38,14 +38,13 @@
     "ember-cli-qunit": "^4.1.1",
     "ember-cli-sass": "^7.1.4",
     "ember-cli-shims": "^1.2.0",
-    "ember-cli-showdown": "2.8.0",
     "ember-cli-sri": "^2.1.0",
     "ember-cli-surge": "1.1.16",
     "ember-cli-template-lint": "0.7.3",
     "ember-cli-uglify": "^2.0.0",
     "ember-component-css": "0.2.7",
     "ember-composable-helpers": "1.1.2",
-    "ember-data": "github:emberjs/data#master",
+    "ember-data": "2.11.0",
     "ember-export-application-global": "^2.0.0",
     "ember-inline-svg": "0.1.7",
     "ember-jwt-decode-shim": "1.1.0",
@@ -56,19 +55,15 @@
     "ember-read-more": "0.0.13",
     "ember-resolver": "^4.0.0",
     "ember-route-action-helper": "2.0.0",
-    "ember-simple-auth": "https://github.com/jedrula/ember-simple-auth.git",
+    "ember-simple-auth": "1.2.0-beta.1",
     "ember-simple-auth-token": "2.0.0",
     "ember-source": "~2.18.0",
     "ember-truth-helpers": "2.0.0",
     "eslint-plugin-ember": "^5.0.0",
-    "loader.js": "^4.2.3",
-    "showdown": "1.5.0"
+    "loader.js": "^4.2.3"
   },
   "engines": {
     "node": "^4.5 || 6.* || >= 7.*"
   },
-  "license": "MIT",
-  "fastbootDependencies": [
-    "showdown"
-  ]
+  "license": "MIT"
 }
