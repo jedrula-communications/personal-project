@@ -7,8 +7,63 @@ export default Ember.Route.extend({
         {
           type: 'part-time',
           remote: true,
+          from: 2021,
+          to: 'now',
+          company: 'Instaroom',
+          icon: 'instaroom.png',
+          link: {
+            what: 'Instaroom',
+            href: 'https://instaroom.travel/',
+          },
+          references: '', // TODO, later Niklas
+          what: 'Conversational automations',
+          responsibilities: [
+            'Vue.js development',
+            'Firebase development (firestore, cloud functions, auth)',
+            'Automations using dialogflow and meya',
+            'Business logic in async php (reactphp)',
+            'Continous deployment with buddy works',
+          ],
+          technologies: [
+            'vue',
+            'php',
+            'firebase',
+            'svg',
+            'meya',
+          ],
+        },
+        {
+          type: 'part-time',
+          remote: true,
           from: 2020,
           to: 'now',
+          company: 'Pathways to Education',
+          icon: 'pathways.jpeg',
+          link: {
+            what: 'Pathways',
+            href: 'https://www.pathwaystoeducation.ca',
+          },
+          references: '', // TODO, later Shub
+          what: 'Platform helping students with high school graduation',
+          responsibilities: [
+            'Vue.js/Nuxt development',
+            'Firebase development (firestore, cloud functions, auth)',
+            'Real time chat and mass messaging feature development',
+            'Syncing firestore with azure db',
+          ],
+          technologies: [
+            'vue',
+            'nuxt',
+            'nodejs',
+            'firebase',
+            'github',
+          ],
+        },
+        {
+          type: 'part-time',
+          remote: true,
+          from: 2020,
+          to: 2021,
           company: 'CardTapp',
           icon: 'toptal.png',
           link: {

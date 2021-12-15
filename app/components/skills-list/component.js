@@ -3,13 +3,17 @@ import Ember from 'ember';
 const { Component, computed } = Ember;
 
 const skillUrlsMap = {
+  meya: 'https://www.meya.ai/',
   ember: 'http://emberjs.com/',
+  nuxt: 'https://nuxtjs.org/',
   ror: 'http://rubyonrails.org/',
   git: 'https://git-scm.com/',
   github: 'https://github.com/',
   aws: 'https://aws.amazon.com/',
+  php: 'https://www.php.net/',
   scss: 'http://sass-lang.com/',
   express: 'http://expressjs.com/',
+  firebase: 'https://firebase.google.com/',
   nodejs: 'https://nodejs.org/en/',
   pug: 'https://pugjs.org/',
   heroku: 'https://www.heroku.com/',
