@@ -64,25 +64,18 @@ md-card-title-text .md-headline:first-letter{
   }
 
   md-card {
-    &:nth-child(4) {
-      margin-top: 10px;
+    &:nth-child(2) {
+      margin-top: 20px;
+      margin-bottom: 20px;
     }
-  
-    &:nth-child(6) {
-      margin-top: 240px;
+
+    &:nth-child(3) {
+      margin-top: 20px;
+      margin-bottom: 40px;
     }
-  
-    &:nth-child(8) {
-      margin-top: 250px;
-    }
-  
-    &:nth-child(10) {
-      margin-top: 250px;
-    }
-  
-    &:nth-child(12) {
-      margin-top: 250px;
-    }
+
+    margin-top: 85px;
+    margin-bottom: 85px;
   }
 }
 

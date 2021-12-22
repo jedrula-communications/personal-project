@@ -17,7 +17,8 @@
     "buildtofastboot": "ember b --environment=production --output-path=../ember-fastboot-server/jedrula-app-dist-only",
     "lint:js": "eslint ./*.js app config lib server tests",
     "start": "ember serve",
-    "test": "ember test"
+    "test": "ember test",
+    "deploy": "ember surge"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
