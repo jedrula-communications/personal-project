@@ -9,6 +9,33 @@ export default Ember.Route.extend({
           remote: true,
           from: 2021,
           to: 'now',
+          company: 'Hashlist',
+          icon: 'hashlist.png',
+          link: {
+            what: 'Hashlist',
+            href: 'https://hashlist.com/',
+          },
+          references: '', // TODO, later Calle
+          what: 'Mobility talent marketplace',
+          responsibilities: [
+            'Vue.js development',
+            'Vue migration from 2 to 3',
+            'Firebase development (firestore, cloud functions, auth)',
+            'Openai integrations',
+            'Github actions for CI/CD',
+          ],
+          technologies: [
+            'vue',
+            'nodejs',
+            'firebase',
+            'github',
+          ],
+        },
+        {
+          type: 'part-time',
+          remote: true,
+          from: 2021,
+          to: 2022,
           company: 'Instaroom',
           icon: 'instaroom.png',
           link: {
@@ -36,7 +63,7 @@ export default Ember.Route.extend({
           type: 'part-time',
           remote: true,
           from: 2020,
-          to: 'now',
+          to: 2023,
           company: 'Pathways to Education',
           icon: 'pathways.jpeg',
           link: {
