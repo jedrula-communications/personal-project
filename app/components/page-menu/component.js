@@ -5,7 +5,7 @@ const { computed, Component } = Ember;
 const publicRoutes = [
   { route: 'blog' },
   { route: 'education' },
-  { route: 'portfolio' },
+  { route: 'portfolio', name: 'portfolio' },
   { route: 'tutoring' },
   { route: 'skills' },
   { route: 'contact' },
